@@ -1,0 +1,50 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/MaterPage/BasePage.Master" AutoEventWireup="true" CodeBehind="MaterPage.master.cs" Inherits="UI.MaterPage.MaterPage" %>
+<%@ Register TagPrefix="Menu" TagName="Menu" Src="~/UCControl/NavigationMenu.ascx" %>
+<%@ Register TagPrefix="Foot" TagName="Foot" Src="~/UCControl/Footer.ascx" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="cphBlank" runat="server">
+    <div id="Container">
+        <div id="Top">
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server"></asp:ContentPlaceHolder>
+            <div style="position: relative; width: 1000px; margin-left: auto; margin-right: auto; margin-top: 0px;margin-top:30px; padding-top: 20px">
+                <Menu:Menu ID="Menu1" runat="server" />
+                <br />
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div class="clear"></div>
+        <div id="MaterPage_DIV_Content">
+            <asp:ContentPlaceHolder ID="CphLeft" runat="server"></asp:ContentPlaceHolder>
+            <div class="clear"></div>
+            <div id="Div2">
+                <asp:ContentPlaceHolder ID="CphContent" runat="server"></asp:ContentPlaceHolder>
+            </div>
+        </div>
+        <div class="clear"></div>
+        <div id="Foot">
+            <Foot:Foot ID="Foot1" runat="server" />
+        </div>
+    </div>
+    <script type="text/javascript">
+        function showHid() {
+            var caret = document.getElementById("dropdown_Div");
+            var dropdown = document.getElementById("dropdown");
+            caret.onmouseover = function () {
+                dropdown.style.display = "block";
+            };
+            caret.onmouseout = function () {
+                setInterval(MouseOut, 3000);
+            }
+        }
+        function MouseOut() {
+            var dropdown = document.getElementById("dropdown");
+            dropdown.style.display = "none";
+        }
+        function Exit() {
+            if (confirm("确定要退出吗？")) {
+                window.location = "../shar/Exit.aspx";
+            }
+        }
+
+        showHid();
+    </script>
+</asp:Content>

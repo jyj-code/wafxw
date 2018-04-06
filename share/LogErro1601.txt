@@ -1,0 +1,5 @@
+【记录时间:2016-01-28-17:23:44 记录信息：】    【Class：Home   Method：Dbing】【Erro：在与 SQL Server 建立连接时出现与网络相关的或特定于实例的错误。未找到或无法访问服务器。请验证实例名称是否正确并且 SQL Server 已配置为允许远程连接。 (provider: Named Pipes Provider, error: 40 - 无法打开到 SQL Server 的连接)】
+【记录时间:2016-01-28-17:24:07 记录信息：】    【Class：shareService   Method：Getshare】【Erro：在与 SQL Server 建立连接时出现与网络相关的或特定于实例的错误。未找到或无法访问服务器。请验证实例名称是否正确并且 SQL Server 已配置为允许远程连接。 (provider: Named Pipes Provider, error: 40 - 无法打开到 SQL Server 的连接)】
+【记录时间:2016-01-28-17:24:08 记录信息：】    【Class：shareService   Method：Getshare】【Erro：在与 SQL Server 建立连接时出现与网络相关的或特定于实例的错误。未找到或无法访问服务器。请验证实例名称是否正确并且 SQL Server 已配置为允许远程连接。 (provider: Named Pipes Provider, error: 40 - 无法打开到 SQL Server 的连接)】
+【记录时间:2016-01-28-17:24:11 记录信息：】    【Class：shareService   Method：Getshare】【Erro：在与 SQL Server 建立连接时出现与网络相关的或特定于实例的错误。未找到或无法访问服务器。请验证实例名称是否正确并且 SQL Server 已配置为允许远程连接。 (provider: Named Pipes Provider, error: 40 - 无法打开到 SQL Server 的连接)】
+【记录时间:2016-01-28-17:30:39 记录信息：】    【Class：DBHelper   Method：GetMenu】【Erro：未能找到文件“E:\工作室\新项目\Code\wafxw\share\Config\MenuType.xml”。】

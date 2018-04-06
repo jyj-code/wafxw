@@ -1,0 +1,44 @@
+
+ 
+记录时间：2015-12-14 12:50:56,747 线程ID:[10196] 日志级别：  ERROR 出错类：share.log4net1.LogHelper property: [(null)] 1427615(run time):输出程序从运行到执行到当前语句时消耗的毫秒数 36：输出语句所在的行号 c:\Users\Tony.Jiang\Desktop\我爱分享网\share\log4net1\LogHelper.cs：输出语句所在的文件名  错误描述：The process cannot access the file 'C:\Users\Tony.Jiang\Desktop\我爱分享网\share\LogErro1512.txt' because it is being used by another process.
+ 
+
+ 
+记录时间：2015-12-14 14:42:41,710 线程ID:[9556] 日志级别：  ERROR 出错类：share.log4net1.LogHelper property: [(null)] 26183(run time):输出程序从运行到执行到当前语句时消耗的毫秒数 36：输出语句所在的行号 c:\Users\Tony.Jiang\Desktop\我爱分享网\share\log4net1\LogHelper.cs：输出语句所在的文件名  错误描述：The process cannot access the file 'C:\Users\Tony.Jiang\Desktop\我爱分享网\share\LogErro1512.txt' because it is being used by another process.
+ 
+
+ 
+记录时间：2015-12-14 14:43:44,872 线程ID:[10992] 日志级别：  ERROR 出错类：share.log4net1.LogHelper property: [(null)] 89345(run time):输出程序从运行到执行到当前语句时消耗的毫秒数 36：输出语句所在的行号 c:\Users\Tony.Jiang\Desktop\我爱分享网\share\log4net1\LogHelper.cs：输出语句所在的文件名  错误描述：The process cannot access the file 'C:\Users\Tony.Jiang\Desktop\我爱分享网\share\LogErro1512.txt' because it is being used by another process.
+ 
+
+ 
+记录时间：2015-12-14 14:44:46,895 线程ID:[9556] 日志级别：  ERROR 出错类：share.log4net1.LogHelper property: [(null)] 151368(run time):输出程序从运行到执行到当前语句时消耗的毫秒数 36：输出语句所在的行号 c:\Users\Tony.Jiang\Desktop\我爱分享网\share\log4net1\LogHelper.cs：输出语句所在的文件名  错误描述：The process cannot access the file 'C:\Users\Tony.Jiang\Desktop\我爱分享网\share\LogErro1512.txt' because it is being used by another process.
+ 
+
+ 
+记录时间：2015-12-14 14:45:55,039 线程ID:[10516] 日志级别：  ERROR 出错类：share.log4net1.LogHelper property: [(null)] 219512(run time):输出程序从运行到执行到当前语句时消耗的毫秒数 36：输出语句所在的行号 c:\Users\Tony.Jiang\Desktop\我爱分享网\share\log4net1\LogHelper.cs：输出语句所在的文件名  错误描述：The process cannot access the file 'C:\Users\Tony.Jiang\Desktop\我爱分享网\share\LogErro1512.txt' because it is being used by another process.
+ 
+
+ 
+记录时间：2015-12-14 14:48:06,405 线程ID:[11204] 日志级别：  ERROR 出错类：share.log4net1.LogHelper property: [(null)] 350879(run time):输出程序从运行到执行到当前语句时消耗的毫秒数 36：输出语句所在的行号 c:\Users\Tony.Jiang\Desktop\我爱分享网\share\log4net1\LogHelper.cs：输出语句所在的文件名  错误描述：The process cannot access the file 'C:\Users\Tony.Jiang\Desktop\我爱分享网\share\LogErro1512.txt' because it is being used by another process.
+ 
+
+ 
+记录时间：2015-12-14 14:48:47,714 线程ID:[11204] 日志级别：  ERROR 出错类：share.log4net1.LogHelper property: [(null)] 392187(run time):输出程序从运行到执行到当前语句时消耗的毫秒数 36：输出语句所在的行号 c:\Users\Tony.Jiang\Desktop\我爱分享网\share\log4net1\LogHelper.cs：输出语句所在的文件名  错误描述：The process cannot access the file 'C:\Users\Tony.Jiang\Desktop\我爱分享网\share\LogErro1512.txt' because it is being used by another process.
+ 
+
+ 
+记录时间：2015-12-14 14:49:42,776 线程ID:[8700] 日志级别：  ERROR 出错类：share.log4net1.LogHelper property: [(null)] 447249(run time):输出程序从运行到执行到当前语句时消耗的毫秒数 36：输出语句所在的行号 c:\Users\Tony.Jiang\Desktop\我爱分享网\share\log4net1\LogHelper.cs：输出语句所在的文件名  错误描述：The process cannot access the file 'C:\Users\Tony.Jiang\Desktop\我爱分享网\share\LogErro1512.txt' because it is being used by another process.
+ 
+
+ 
+记录时间：2015-12-14 14:50:20,731 线程ID:[4180] 日志级别：  ERROR 出错类：share.log4net1.LogHelper property: [(null)] 485204(run time):输出程序从运行到执行到当前语句时消耗的毫秒数 36：输出语句所在的行号 c:\Users\Tony.Jiang\Desktop\我爱分享网\share\log4net1\LogHelper.cs：输出语句所在的文件名  错误描述：The process cannot access the file 'C:\Users\Tony.Jiang\Desktop\我爱分享网\share\LogErro1512.txt' because it is being used by another process.
+ 
+
+ 
+记录时间：2015-12-14 14:50:54,910 线程ID:[11164] 日志级别：  ERROR 出错类：share.log4net1.LogHelper property: [(null)] 519383(run time):输出程序从运行到执行到当前语句时消耗的毫秒数 36：输出语句所在的行号 c:\Users\Tony.Jiang\Desktop\我爱分享网\share\log4net1\LogHelper.cs：输出语句所在的文件名  错误描述：The process cannot access the file 'C:\Users\Tony.Jiang\Desktop\我爱分享网\share\LogErro1512.txt' because it is being used by another process.
+ 
+
+ 
+记录时间：2015-12-14 14:52:00,606 线程ID:[4180] 日志级别：  ERROR 出错类：share.log4net1.LogHelper property: [(null)] 585079(run time):输出程序从运行到执行到当前语句时消耗的毫秒数 36：输出语句所在的行号 c:\Users\Tony.Jiang\Desktop\我爱分享网\share\log4net1\LogHelper.cs：输出语句所在的文件名  错误描述：The process cannot access the file 'C:\Users\Tony.Jiang\Desktop\我爱分享网\share\LogErro1512.txt' because it is being used by another process.
+ 

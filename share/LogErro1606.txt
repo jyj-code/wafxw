@@ -1,0 +1,12 @@
+【记录时间:2016-06-28-09:08:22 记录信息：】    【Class：shareService   Method：Getshare】【Erro：对象名 'dbo.Customer' 无效。】
+【记录时间:2016-06-28-09:08:23 记录信息：】    【Class：shareService   Method：Getshare】【Erro：对象名 'dbo.Customer' 无效。】
+【记录时间:2016-06-28-09:08:29 记录信息：】    【Class：shareService   Method：Getshare】【Erro：对象名 'dbo.Customer' 无效。】
+【记录时间:2016-06-28-09:09:52 记录信息：】    【Class：shareService   Method：Getshare】【Erro：对象名 'dbo.Customer' 无效。】
+【记录时间:2016-06-28-09:09:53 记录信息：】    【Class：shareService   Method：Getshare】【Erro：对象名 'dbo.Customer' 无效。】
+【记录时间:2016-06-28-09:09:55 记录信息：】    【Class：shareService   Method：Getshare】【Erro：对象名 'dbo.Customer' 无效。】
+【记录时间:2016-06-28-09:11:31 记录信息：】    【Class：shareService   Method：Getshare】【Erro：对象名 'dbo.Customer' 无效。】
+【记录时间:2016-06-28-09:11:32 记录信息：】    【Class：shareService   Method：Getshare】【Erro：对象名 'dbo.Customer' 无效。】
+【记录时间:2016-06-28-09:11:33 记录信息：】    【Class：shareService   Method：Getshare】【Erro：对象名 'dbo.Customer' 无效。】
+【记录时间:2016-06-28-09:13:17 记录信息：】    【Class：shareService   Method：Getshare】【Erro：对象名 'dbo.Customer' 无效。】
+【记录时间:2016-06-28-09:13:18 记录信息：】    【Class：shareService   Method：Getshare】【Erro：对象名 'dbo.Customer' 无效。】
+【记录时间:2016-06-28-09:13:19 记录信息：】    【Class：shareService   Method：Getshare】【Erro：对象名 'dbo.Customer' 无效。】

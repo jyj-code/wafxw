@@ -1,0 +1,2047 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{32C544B0-1EE2-47F7-A11E-99EDC51B316B}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>share</RootNamespace>
+    <AssemblyName>share</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AjaxMin">
+      <HintPath>..\packages\AjaxMin.5.14.5506.26202\lib\net40\AjaxMin.dll</HintPath>
+    </Reference>
+    <Reference Include="AspNetPager, Version=7.5.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\AspNetPager.dll</HintPath>
+    </Reference>
+    <Reference Include="Combres">
+      <HintPath>..\packages\combres.2.3.0.4\lib\net40\Combres.dll</HintPath>
+    </Reference>
+    <Reference Include="DC.Web.HttpCompress, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\DC.Web.HttpCompress.dll</HintPath>
+    </Reference>
+    <Reference Include="dotless.Core">
+      <HintPath>..\packages\dotless.1.4.1.0\lib\dotless.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="EcmaScript.NET">
+      <HintPath>..\packages\EcmaScript.Net.1.0.1.0\lib\net20\EcmaScript.NET.dll</HintPath>
+    </Reference>
+    <Reference Include="Fasterflect">
+      <HintPath>..\packages\fasterflect.2.1.3\lib\net40\Fasterflect.dll</HintPath>
+    </Reference>
+    <Reference Include="HtmlAgilityPack, Version=1.4.9.0, Culture=neutral, PublicKeyToken=bd319b19eaf3b43a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\HtmlAgilityPack.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=1.2.9.0, Culture=neutral, PublicKeyToken=b32731d11ce58905">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="WebActivatorEx">
+      <HintPath>..\packages\WebActivatorEx.2.0.6\lib\net40\WebActivatorEx.dll</HintPath>
+    </Reference>
+    <Reference Include="Yahoo.Yui.Compressor">
+      <HintPath>..\packages\YUICompressor.NET.2.7.0.0\lib\NET20\Yahoo.Yui.Compressor.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Data\combres.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\combres_full_with_annotation.xml" />
+    <Content Include="App_Data\combres_minimal.xml" />
+    <Content Include="App_Themes\Image\GIF\add.gif" />
+    <Content Include="App_Themes\Image\GIF\13.gif" />
+    <Content Include="App_Themes\Image\GIF\10.gif" />
+    <Content Include="App_Themes\Image\GIF\11.gif" />
+    <Content Include="App_Themes\Image\GIF\12.gif" />
+    <Content Include="App_Themes\Image\GIF\1.gif" />
+    <Content Include="App_Themes\Image\GIF\2.gif" />
+    <Content Include="App_Themes\Image\GIF\3.gif" />
+    <Content Include="App_Themes\Image\GIF\4.gif" />
+    <Content Include="App_Themes\Image\GIF\5.gif" />
+    <Content Include="App_Themes\Image\GIF\6.gif" />
+    <Content Include="App_Themes\Image\GIF\7.gif" />
+    <Content Include="App_Themes\Image\GIF\8.gif" />
+    <Content Include="App_Themes\Image\GIF\15.gif" />
+    <Content Include="App_Themes\Image\GIF\9.gif" />
+    <Content Include="App_Themes\Image\000000000.gif" />
+    <Content Include="App_Themes\Image\1000.gif" />
+    <Content Include="App_Themes\Image\111111.gif" />
+    <Content Include="App_Themes\Image\200.gif" />
+    <Content Include="App_Themes\Image\333333333.gif" />
+    <Content Include="App_Themes\Image\4444444444.gif" />
+    <Content Include="App_Themes\Image\5555555555.gif" />
+    <Content Include="App_Themes\Image\8370091_255.gif" />
+    <Content Include="App_Themes\Image\c.gif" />
+    <Content Include="App_Themes\Image\C3.gif" />
+    <Content Include="App_Themes\Image\C4.gif" />
+    <Content Include="App_Themes\Image\C5.gif" />
+    <Content Include="App_Themes\Image\Erro.bmp" />
+    <Content Include="App_Themes\Image\images\0.jpg" />
+    <Content Include="App_Themes\Image\images\00001.gif" />
+    <Content Include="App_Themes\Image\images\00002.gif" />
+    <Content Include="App_Themes\Image\images\00003.gif" />
+    <Content Include="App_Themes\Image\images\0002.gif" />
+    <Content Include="App_Themes\Image\images\0003.gif" />
+    <Content Include="App_Themes\Image\images\004.jpg" />
+    <Content Include="App_Themes\Image\images\006.jpg" />
+    <Content Include="App_Themes\Image\images\0f5d99c12f605064ce3cd236e4e8ac9a.gif" />
+    <Content Include="App_Themes\Image\images\1.jpg" />
+    <Content Include="App_Themes\Image\images\2.jpg" />
+    <Content Include="App_Themes\Image\images\22679188_819.gif" />
+    <Content Include="App_Themes\Image\images\2873392.gif" />
+    <Content Include="App_Themes\Image\images\3.jpg" />
+    <Content Include="App_Themes\Image\images\4.jpg" />
+    <Content Include="App_Themes\Image\images\5.jpg" />
+    <Content Include="App_Themes\Image\images\6.gif" />
+    <Content Include="App_Themes\Image\images\88888.gif" />
+    <Content Include="App_Themes\Image\images\999.gif" />
+    <Content Include="App_Themes\Image\images\C2.gif" />
+    <Content Include="App_Themes\Image\images\Carousel\00001.gif" />
+    <Content Include="App_Themes\Image\images\Carousel\00002.gif" />
+    <Content Include="App_Themes\Image\images\Carousel\00003.gif" />
+    <Content Include="App_Themes\Image\images\Carousel\0002.gif" />
+    <Content Include="App_Themes\Image\images\Carousel\0003.gif" />
+    <Content Include="App_Themes\Image\images\Carousel\006.jpg" />
+    <Content Include="App_Themes\Image\images\Carousel\0f5d99c12f605064ce3cd236e4e8ac9a.gif" />
+    <Content Include="App_Themes\Image\images\Carousel\2873392.gif" />
+    <Content Include="App_Themes\Image\images\Carousel\6.gif" />
+    <Content Include="App_Themes\Image\images\Carousel\Error.jpg" />
+    <Content Include="App_Themes\Image\images\error.jpg" />
+    <Content Include="App_Themes\Image\images\3333.gif" />
+    <Content Include="App_Themes\Image\news.gif" />
+    <Content Include="App_Themes\Image\GIF\14.gif" />
+    <Content Include="App_Themes\Image\png\1.png" />
+    <Content Include="App_Themes\Image\png\Connect_logo_3.png" />
+    <Content Include="App_Themes\Image\png\Connect_logo_7.png" />
+    <Content Include="App_Themes\Image\rainbow.png" />
+    <Content Include="Error.aspx" />
+    <Content Include="Home.aspx" />
+    <Content Include="job\imgs\123.ico" />
+    <Content Include="job\imgs\loadingAnimation.gif" />
+    <Content Include="job\imgs\星星13_.ico" />
+    <Content Include="job\imgs\星星14_.ico" />
+    <Content Include="job\imgs\星星no.ico" />
+    <Content Include="job\imgs\星星ok.ico" />
+    <Content Include="job\job.aspx" />
+    <Content Include="job\script\common\common.js" />
+    <Content Include="job\script\common\DatePicker\calendar.js" />
+    <Content Include="job\script\common\DatePicker\config.js" />
+    <Content Include="job\script\common\DatePicker\lang\en.js" />
+    <Content Include="job\script\common\DatePicker\lang\zh-cn.js" />
+    <Content Include="job\script\common\DatePicker\lang\zh-tw.js" />
+    <Content Include="job\script\common\DatePicker\My97DatePicker.htm" />
+    <Content Include="job\script\common\DatePicker\WdatePicker.js" />
+    <Content Include="job\script\common\DatePicker\开发包\lang\en.js" />
+    <Content Include="job\script\common\DatePicker\开发包\lang\zh-cn.js" />
+    <Content Include="job\script\common\DatePicker\开发包\lang\zh-tw.js" />
+    <Content Include="job\script\common\DatePicker\开发包\readme.txt" />
+    <Content Include="job\script\common\DatePicker\开发包\skin\datePicker.gif" />
+    <Content Include="job\script\common\DatePicker\开发包\skin\default\datepicker.css" />
+    <Content Include="job\script\common\DatePicker\开发包\skin\default\img.gif" />
+    <Content Include="job\script\common\DatePicker\开发包\skin\WdatePicker.css" />
+    <Content Include="job\script\common\DatePicker\开发包\skin\whyGreen\bg.jpg" />
+    <Content Include="job\script\common\DatePicker\开发包\skin\whyGreen\datepicker.css" />
+    <Content Include="job\script\common\DatePicker\开发包\skin\whyGreen\img.gif" />
+    <Content Include="job\script\common\jquery.blockUI.js" />
+    <Content Include="job\script\common\Msg\images\loader.gif" />
+    <Content Include="job\script\common\Msg\images\qzonebg.gif" />
+    <Content Include="job\script\common\Msg\msgBox.js" />
+    <Content Include="job\script\common\MyDataPack.js" />
+    <Content Include="job\script\jquery-1.7.1.min.js" />
+    <Content Include="linkAdd.aspx" />
+    <Content Include="MoreDatailed.aspx" />
+    <Content Include="oauth\GetRightQQTonken.aspx" />
+    <Content Include="oauth\QQlogin.aspx" />
+    <Content Include="qq_back.html" />
+    <Content Include="ReleaseEditors.aspx" />
+    <Content Include="shar\ChangePassword.aspx" />
+    <Content Include="shar\DeleteShortArticle.aspx" />
+    <Content Include="shar\Exit.aspx" />
+    <Content Include="Login.aspx" />
+    <Content Include="shar\Index.aspx" />
+    <Content Include="Register.aspx" />
+    <Content Include="App_Themes\css\c.css" />
+    <Content Include="App_Themes\css\Delivery.css" />
+    <Content Include="App_Themes\css\float.css" />
+    <Content Include="App_Themes\css\i-ColorWidth.css" />
+    <Content Include="App_Themes\css\ie.css" />
+    <Content Include="App_Themes\css\index.css" />
+    <Content Include="App_Themes\css\l-flat.css" />
+    <Content Include="App_Themes\css\l.css" />
+    <Content Include="App_Themes\css\layout-windowouter.css" />
+    <Content Include="App_Themes\css\login-GreenTown01.css" />
+    <Content Include="App_Themes\css\login.css" />
+    <Content Include="App_Themes\css\master.css" />
+    <Content Include="App_Themes\css\mixins\l-color.css" />
+    <Content Include="App_Themes\css\mixins\m-background-variant.css" />
+    <Content Include="App_Themes\css\mixins\m-border-radius.css" />
+    <Content Include="App_Themes\css\mixins\m-center-block.css" />
+    <Content Include="App_Themes\css\mixins\m-clearfix.css" />
+    <Content Include="App_Themes\css\mixins\m-css3.css" />
+    <Content Include="App_Themes\css\mixins\m-gradients.css" />
+    <Content Include="App_Themes\css\mixins\m-grid.css" />
+    <Content Include="App_Themes\css\mixins\m-hide-text.css" />
+    <Content Include="App_Themes\css\mixins\m-image.css" />
+    <Content Include="App_Themes\css\mixins\m-labels.css" />
+    <Content Include="App_Themes\css\mixins\m-reset.css" />
+    <Content Include="App_Themes\css\mixins\m-shadow.css" />
+    <Content Include="App_Themes\css\mixins\m-u.css" />
+    <Content Include="App_Themes\css\mixins\u-padding.css" />
+    <Content Include="App_Themes\css\mixins\veryless-plugin.css" />
+    <Content Include="App_Themes\css\mixins\veryless.css" />
+    <Content Include="App_Themes\css\p-doctor-group.css" />
+    <Content Include="App_Themes\css\p-index.css" />
+    <Content Include="App_Themes\css\p.css" />
+    <Content Include="App_Themes\css\print.css" />
+    <Content Include="App_Themes\css\reset.css" />
+    <Content Include="App_Themes\css\screen-user.css" />
+    <Content Include="App_Themes\css\star.css" />
+    <Content Include="App_Themes\css\style.css" />
+    <Content Include="App_Themes\css\u.css" />
+    <Content Include="App_Themes\css\unicorn.main.css" />
+    <Content Include="App_Themes\css\unicorn.style.css" />
+    <Content Include="App_Themes\developer\bootstrap-switch-master\dist\css\bootstrap2\bootstrap-switch.css" />
+    <Content Include="App_Themes\developer\bootstrap-switch-master\dist\css\bootstrap2\bootstrap-switch.min.css" />
+    <Content Include="App_Themes\developer\bootstrap-switch-master\dist\css\bootstrap3\bootstrap-switch.css" />
+    <Content Include="App_Themes\developer\bootstrap-switch-master\dist\css\bootstrap3\bootstrap-switch.min.css" />
+    <Content Include="App_Themes\developer\bootstrap-switch-master\dist\js\bootstrap-switch.js" />
+    <Content Include="App_Themes\developer\bootstrap-switch-master\dist\js\bootstrap-switch.min.js" />
+    <Content Include="App_Themes\developer\bootstrap\css\bootstrap-responsive.css" />
+    <Content Include="App_Themes\developer\bootstrap\css\bootstrap-theme.css" />
+    <Content Include="App_Themes\developer\bootstrap\css\bootstrap-theme.min.css" />
+    <Content Include="App_Themes\developer\bootstrap\css\bootstrap.css" />
+    <Content Include="App_Themes\developer\bootstrap\css\bootstrap.min-3.35.css" />
+    <Content Include="App_Themes\developer\bootstrap\css\bootstrap.min.css" />
+    <Content Include="App_Themes\developer\bootstrap\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="App_Themes\developer\bootstrap\js\bootstrap.js" />
+    <Content Include="App_Themes\developer\bootstrap\js\bootstrap.min.js" />
+    <Content Include="App_Themes\developer\flatUi\css\dh.css" />
+    <Content Include="App_Themes\developer\flatUi\css\flat-ui.css" />
+    <Content Include="App_Themes\developer\flatUi\fonts\flat-ui-icons-regular.svg" />
+    <Content Include="App_Themes\developer\flatUi\fonts\lato\lato-black.svg" />
+    <Content Include="App_Themes\developer\flatUi\fonts\lato\lato-bold.svg" />
+    <Content Include="App_Themes\developer\flatUi\fonts\lato\lato-bolditalic.svg" />
+    <Content Include="App_Themes\developer\flatUi\fonts\lato\lato-italic.svg" />
+    <Content Include="App_Themes\developer\flatUi\fonts\lato\lato-light.svg" />
+    <Content Include="App_Themes\developer\flatUi\fonts\lato\lato-regular.svg" />
+    <Content Include="App_Themes\developer\flatUi\images\icons\png\Book.png" />
+    <Content Include="App_Themes\developer\flatUi\images\icons\png\Calendar.png" />
+    <Content Include="App_Themes\developer\flatUi\images\icons\png\Chat.png" />
+    <Content Include="App_Themes\developer\flatUi\images\icons\png\Clipboard.png" />
+    <Content Include="App_Themes\developer\flatUi\images\icons\png\Compas.png" />
+    <Content Include="App_Themes\developer\flatUi\images\icons\png\Gift-Box.png" />
+    <Content Include="App_Themes\developer\flatUi\images\icons\png\Infinity-Loop.png" />
+    <Content Include="App_Themes\developer\flatUi\images\icons\png\Mail.png" />
+    <Content Include="App_Themes\developer\flatUi\images\icons\png\Map.png" />
+    <Content Include="App_Themes\developer\flatUi\images\icons\png\Pensils.png" />
+    <Content Include="App_Themes\developer\flatUi\images\icons\png\Pocket.png" />
+    <Content Include="App_Themes\developer\flatUi\images\icons\png\Retina-Ready.png" />
+    <Content Include="App_Themes\developer\flatUi\images\icons\png\Toilet-Paper.png" />
+    <Content Include="App_Themes\developer\flatUi\images\icons\png\Watches.png" />
+    <Content Include="App_Themes\developer\flatUi\images\icons\svg\book.svg" />
+    <Content Include="App_Themes\developer\flatUi\images\icons\svg\calendar.svg" />
+    <Content Include="App_Themes\developer\flatUi\images\icons\svg\chat.svg" />
+    <Content Include="App_Themes\developer\flatUi\images\icons\svg\clipboard.svg" />
+    <Content Include="App_Themes\developer\flatUi\images\icons\svg\clocks.svg" />
+    <Content Include="App_Themes\developer\flatUi\images\icons\svg\compas.svg" />
+    <Content Include="App_Themes\developer\flatUi\images\icons\svg\gift-box.svg" />
+    <Content Include="App_Themes\developer\flatUi\images\icons\svg\loop.svg" />
+    <Content Include="App_Themes\developer\flatUi\images\icons\svg\mail.svg" />
+    <Content Include="App_Themes\developer\flatUi\images\icons\svg\map.svg" />
+    <Content Include="App_Themes\developer\flatUi\images\icons\svg\paper-bag.svg" />
+    <Content Include="App_Themes\developer\flatUi\images\icons\svg\pencils.svg" />
+    <Content Include="App_Themes\developer\flatUi\images\icons\svg\retina.svg" />
+    <Content Include="App_Themes\developer\flatUi\images\icons\svg\toilet-paper.svg" />
+    <Content Include="App_Themes\developer\flatUi\images\login\icon.png" />
+    <Content Include="App_Themes\developer\flatUi\images\login\imac-2x.png" />
+    <Content Include="App_Themes\developer\flatUi\images\login\imac.png" />
+    <Content Include="App_Themes\developer\flatUi\images\switch\mask-square.png" />
+    <Content Include="App_Themes\developer\flatUi\images\switch\mask.png" />
+    <Content Include="App_Themes\developer\flatUi\images\tile\ribbon-2x.png" />
+    <Content Include="App_Themes\developer\flatUi\images\tile\ribbon.png" />
+    <Content Include="App_Themes\developer\flatUi\images\todo\done-2x.png" />
+    <Content Include="App_Themes\developer\flatUi\images\todo\done.png" />
+    <Content Include="App_Themes\developer\flatUi\images\todo\search-2x.png" />
+    <Content Include="App_Themes\developer\flatUi\images\todo\search.png" />
+    <Content Include="App_Themes\developer\flatUi\images\todo\todo-2x.png" />
+    <Content Include="App_Themes\developer\flatUi\images\todo\todo.png" />
+    <Content Include="App_Themes\developer\flatUi\images\video\fullscreen-2x.png" />
+    <Content Include="App_Themes\developer\flatUi\images\video\fullscreen.png" />
+    <Content Include="App_Themes\developer\flatUi\images\video\pause-2x.png" />
+    <Content Include="App_Themes\developer\flatUi\images\video\pause.png" />
+    <Content Include="App_Themes\developer\flatUi\images\video\play-2x.png" />
+    <Content Include="App_Themes\developer\flatUi\images\video\play.png" />
+    <Content Include="App_Themes\developer\flatUi\images\video\poster.jpg" />
+    <Content Include="App_Themes\developer\flatUi\images\video\volume-full-2x.png" />
+    <Content Include="App_Themes\developer\flatUi\images\video\volume-full.png" />
+    <Content Include="App_Themes\developer\flatUi\images\video\volume-off-2x.png" />
+    <Content Include="App_Themes\developer\flatUi\images\video\volume-off.png" />
+    <Content Include="App_Themes\developer\flatUi\js\application.js" />
+    <Content Include="App_Themes\developer\flatUi\js\bootstrap-select.js" />
+    <Content Include="App_Themes\developer\flatUi\js\bootstrap-switch.js" />
+    <Content Include="App_Themes\developer\flatUi\js\bootstrap.min.js" />
+    <Content Include="App_Themes\developer\flatUi\js\flatui-checkbox.js" />
+    <Content Include="App_Themes\developer\flatUi\js\flatui-radio.js" />
+    <Content Include="App_Themes\developer\flatUi\js\html5shiv.js" />
+    <Content Include="App_Themes\developer\flatUi\js\icon-font-ie7.js" />
+    <Content Include="App_Themes\developer\flatUi\js\jquery-1.10.2.min.js" />
+    <Content Include="App_Themes\developer\flatUi\js\jquery-1.8.3.min.js" />
+    <Content Include="App_Themes\developer\flatUi\js\jquery-2.0.3.min.js" />
+    <Content Include="App_Themes\developer\flatUi\js\jquery-ui-1.10.3.custom.min.js" />
+    <Content Include="App_Themes\developer\flatUi\js\jquery.placeholder.js" />
+    <Content Include="App_Themes\developer\flatUi\js\jquery.tagsinput.js" />
+    <Content Include="App_Themes\developer\flatUi\js\jquery.ui.touch-punch.min.js" />
+    <Content Include="App_Themes\developer\flatUi\js\respond.min.js" />
+    <Content Include="App_Themes\developer\flatUi\js\typeahead.js" />
+    <Content Include="App_Themes\developer\font-awesome-4.2.0\css\font-awesome.css" />
+    <Content Include="App_Themes\developer\font-awesome-4.2.0\css\font-awesome.min.css" />
+    <Content Include="App_Themes\developer\font-awesome-4.2.0\fonts\fontawesome-webfont.svg" />
+    <Content Include="App_Themes\developer\FooTable-2\.gitattributes" />
+    <Content Include="App_Themes\developer\FooTable-2\.gitignore" />
+    <Content Include="App_Themes\developer\FooTable-2\css\fonts\footable.svg" />
+    <Content Include="App_Themes\developer\FooTable-2\css\footable.core.css" />
+    <Content Include="App_Themes\developer\FooTable-2\css\footable.core.min.css" />
+    <Content Include="App_Themes\developer\FooTable-2\css\footable.metro.css" />
+    <Content Include="App_Themes\developer\FooTable-2\css\footable.metro.min.css" />
+    <Content Include="App_Themes\developer\FooTable-2\css\footable.standalone.css" />
+    <Content Include="App_Themes\developer\FooTable-2\css\footable.standalone.min.css" />
+    <Content Include="App_Themes\developer\FooTable-2\demos\accordion.htm" />
+    <Content Include="App_Themes\developer\FooTable-2\demos\add-delete-row.htm" />
+    <Content Include="App_Themes\developer\FooTable-2\demos\ajax-redraw.htm" />
+    <Content Include="App_Themes\developer\FooTable-2\demos\ajax.htm" />
+    <Content Include="App_Themes\developer\FooTable-2\demos\api.htm" />
+    <Content Include="App_Themes\developer\FooTable-2\demos\arbitrary_toggle_markup.htm" />
+    <Content Include="App_Themes\developer\FooTable-2\demos\auto-expand-first-row-on-breakpoint.htm" />
+    <Content Include="App_Themes\developer\FooTable-2\demos\bookmarkable.htm" />
+    <Content Include="App_Themes\developer\FooTable-2\demos\bug-fixes\bug-data-ignore.htm" />
+    <Content Include="App_Themes\developer\FooTable-2\demos\bug-fixes\bug-remove-unneeded-detail-row-click.htm" />
+    <Content Include="App_Themes\developer\FooTable-2\demos\bug-fixes\bug-unused-breakpoints.htm" />
+    <Content Include="App_Themes\developer\FooTable-2\demos\css\arbitrary_toggle_markup.css" />
+    <Content Include="App_Themes\developer\FooTable-2\demos\css\bootstrap-glyphicons.css" />
+    <Content Include="App_Themes\developer\FooTable-2\demos\css\bootstrap-responsive.css" />
+    <Content Include="App_Themes\developer\FooTable-2\demos\css\bootstrap.css" />
+    <Content Include="App_Themes\developer\FooTable-2\demos\css\bootstrapSwitch.css" />
+    <Content Include="App_Themes\developer\FooTable-2\demos\css\footable-demos.css" />
+    <Content Include="App_Themes\developer\FooTable-2\demos\data-attributes.htm" />
+    <Content Include="App_Themes\developer\FooTable-2\demos\demo-template.htm" />
+    <Content Include="App_Themes\developer\FooTable-2\demos\editable-columns.htm" />
+    <Content Include="App_Themes\developer\FooTable-2\demos\event-interception.htm" />
+    <Content Include="App_Themes\developer\FooTable-2\demos\events.htm" />
+    <Content Include="App_Themes\developer\FooTable-2\demos\expand-collapse-all.htm" />
+    <Content Include="App_Themes\developer\FooTable-2\demos\filtering.htm" />
+    <Content Include="App_Themes\developer\FooTable-2\demos\fonts\glyphiconshalflings-regular.svg" />
+    <Content Include="App_Themes\developer\FooTable-2\demos\getting-started.htm" />
+    <Content Include="App_Themes\developer\FooTable-2\demos\grid.htm" />
+    <Content Include="App_Themes\developer\FooTable-2\demos\group-headers.htm" />
+    <Content Include="App_Themes\developer\FooTable-2\demos\hidden-columns.htm" />
+    <Content Include="App_Themes\developer\FooTable-2\demos\icon-styles.htm" />
+    <Content Include="App_Themes\developer\FooTable-2\demos\img\footable.png" />
+    <Content Include="App_Themes\developer\FooTable-2\demos\img\minus.png" />
+    <Content Include="App_Themes\developer\FooTable-2\demos\img\plus.png" />
+    <Content Include="App_Themes\developer\FooTable-2\demos\index.htm" />
+    <Content Include="App_Themes\developer\FooTable-2\demos\js\bootstrap-tab.js" />
+    <Content Include="App_Themes\developer\FooTable-2\demos\js\bootstrapSwitch.js" />
+    <Content Include="App_Themes\developer\FooTable-2\demos\js\data-generator.js" />
+    <Content Include="App_Themes\developer\FooTable-2\demos\js\demos.js" />
+    <Content Include="App_Themes\developer\FooTable-2\demos\js\jquery-1.9.1.min.js" />
+    <Content Include="App_Themes\developer\FooTable-2\demos\js\jquery.mockjax.js" />
+    <Content Include="App_Themes\developer\FooTable-2\demos\js\mustache.js" />
+    <Content Include="App_Themes\developer\FooTable-2\demos\metro-theme.htm" />
+    <Content Include="App_Themes\developer\FooTable-2\demos\multiple-showcases.htm" />
+    <Content Include="App_Themes\developer\FooTable-2\demos\old-theme.htm" />
+    <Content Include="App_Themes\developer\FooTable-2\demos\paging.htm" />
+    <Content Include="App_Themes\developer\FooTable-2\demos\reset.htm" />
+    <Content Include="App_Themes\developer\FooTable-2\demos\row-toggle.htm" />
+    <Content Include="App_Themes\developer\FooTable-2\demos\showcase.htm" />
+    <Content Include="App_Themes\developer\FooTable-2\demos\sorting.htm" />
+    <Content Include="App_Themes\developer\FooTable-2\demos\striping.htm" />
+    <Content Include="App_Themes\developer\FooTable-2\demos\todo\column-groupings.htm" />
+    <Content Include="App_Themes\developer\FooTable-2\demos\todo\demo-ajax-with-mustache.htm" />
+    <Content Include="App_Themes\developer\FooTable-2\demos\todo\demo-bootstrapSwitch.htm" />
+    <Content Include="App_Themes\developer\FooTable-2\demos\todo\demo-colspan.htm" />
+    <Content Include="App_Themes\developer\FooTable-2\demos\todo\demo-widthHeightOverride.htm" />
+    <Content Include="App_Themes\developer\FooTable-2\demos\todo\demo-zebra.htm" />
+    <Content Include="App_Themes\developer\FooTable-2\demos\triggers.htm" />
+    <Content Include="App_Themes\developer\FooTable-2\dist\footable.all.min.js" />
+    <Content Include="App_Themes\developer\FooTable-2\dist\footable.bookmarkable.min.js" />
+    <Content Include="App_Themes\developer\FooTable-2\dist\footable.filter.min.js" />
+    <Content Include="App_Themes\developer\FooTable-2\dist\footable.grid.min.js" />
+    <Content Include="App_Themes\developer\FooTable-2\dist\footable.min.js" />
+    <Content Include="App_Themes\developer\FooTable-2\dist\footable.paginate.min.js" />
+    <Content Include="App_Themes\developer\FooTable-2\dist\footable.sort.min.js" />
+    <Content Include="App_Themes\developer\FooTable-2\dist\footable.striping.min.js" />
+    <Content Include="App_Themes\developer\FooTable-2\Gruntfile.js" />
+    <Content Include="App_Themes\developer\FooTable-2\js\footable.bookmarkable.js" />
+    <Content Include="App_Themes\developer\FooTable-2\js\footable.filter.js" />
+    <Content Include="App_Themes\developer\FooTable-2\js\footable.grid.js" />
+    <Content Include="App_Themes\developer\FooTable-2\js\footable.js" />
+    <Content Include="App_Themes\developer\FooTable-2\js\footable.memory.js" />
+    <Content Include="App_Themes\developer\FooTable-2\js\footable.paginate.js" />
+    <Content Include="App_Themes\developer\FooTable-2\js\footable.plugin.template.js" />
+    <Content Include="App_Themes\developer\FooTable-2\js\footable.sort.js" />
+    <Content Include="App_Themes\developer\FooTable-2\js\footable.striping.js" />
+    <Content Include="App_Themes\developer\FooTable-2\screenshot.jpg" />
+    <Content Include="App_Themes\developer\fullcalendar\changelog.txt" />
+    <Content Include="App_Themes\developer\fullcalendar\fullcalendar.css" />
+    <Content Include="App_Themes\developer\fullcalendar\fullcalendar.js" />
+    <Content Include="App_Themes\developer\fullcalendar\fullcalendar.min.css" />
+    <Content Include="App_Themes\developer\fullcalendar\fullcalendar.min.js" />
+    <Content Include="App_Themes\developer\fullcalendar\fullcalendar.print.css" />
+    <Content Include="App_Themes\developer\fullcalendar\gcal.js" />
+    <Content Include="App_Themes\developer\fullcalendar\lang-all.js" />
+    <Content Include="App_Themes\developer\fullcalendar\lang\ar-ma.js" />
+    <Content Include="App_Themes\developer\fullcalendar\lang\ar-sa.js" />
+    <Content Include="App_Themes\developer\fullcalendar\lang\ar.js" />
+    <Content Include="App_Themes\developer\fullcalendar\lang\bg.js" />
+    <Content Include="App_Themes\developer\fullcalendar\lang\ca.js" />
+    <Content Include="App_Themes\developer\fullcalendar\lang\cs.js" />
+    <Content Include="App_Themes\developer\fullcalendar\lang\da.js" />
+    <Content Include="App_Themes\developer\fullcalendar\lang\de-at.js" />
+    <Content Include="App_Themes\developer\fullcalendar\lang\de.js" />
+    <Content Include="App_Themes\developer\fullcalendar\lang\el.js" />
+    <Content Include="App_Themes\developer\fullcalendar\lang\en-au.js" />
+    <Content Include="App_Themes\developer\fullcalendar\lang\en-ca.js" />
+    <Content Include="App_Themes\developer\fullcalendar\lang\en-gb.js" />
+    <Content Include="App_Themes\developer\fullcalendar\lang\es.js" />
+    <Content Include="App_Themes\developer\fullcalendar\lang\fa.js" />
+    <Content Include="App_Themes\developer\fullcalendar\lang\fi.js" />
+    <Content Include="App_Themes\developer\fullcalendar\lang\fr-ca.js" />
+    <Content Include="App_Themes\developer\fullcalendar\lang\fr.js" />
+    <Content Include="App_Themes\developer\fullcalendar\lang\hi.js" />
+    <Content Include="App_Themes\developer\fullcalendar\lang\hr.js" />
+    <Content Include="App_Themes\developer\fullcalendar\lang\hu.js" />
+    <Content Include="App_Themes\developer\fullcalendar\lang\id.js" />
+    <Content Include="App_Themes\developer\fullcalendar\lang\is.js" />
+    <Content Include="App_Themes\developer\fullcalendar\lang\it.js" />
+    <Content Include="App_Themes\developer\fullcalendar\lang\ja.js" />
+    <Content Include="App_Themes\developer\fullcalendar\lang\ko.js" />
+    <Content Include="App_Themes\developer\fullcalendar\lang\lt.js" />
+    <Content Include="App_Themes\developer\fullcalendar\lang\lv.js" />
+    <Content Include="App_Themes\developer\fullcalendar\lang\nl.js" />
+    <Content Include="App_Themes\developer\fullcalendar\lang\pl.js" />
+    <Content Include="App_Themes\developer\fullcalendar\lang\pt-br.js" />
+    <Content Include="App_Themes\developer\fullcalendar\lang\pt.js" />
+    <Content Include="App_Themes\developer\fullcalendar\lang\ro.js" />
+    <Content Include="App_Themes\developer\fullcalendar\lang\ru.js" />
+    <Content Include="App_Themes\developer\fullcalendar\lang\sk.js" />
+    <Content Include="App_Themes\developer\fullcalendar\lang\sl.js" />
+    <Content Include="App_Themes\developer\fullcalendar\lang\sr-cyrl.js" />
+    <Content Include="App_Themes\developer\fullcalendar\lang\sr.js" />
+    <Content Include="App_Themes\developer\fullcalendar\lang\sv.js" />
+    <Content Include="App_Themes\developer\fullcalendar\lang\th.js" />
+    <Content Include="App_Themes\developer\fullcalendar\lang\tr.js" />
+    <Content Include="App_Themes\developer\fullcalendar\lang\uk.js" />
+    <Content Include="App_Themes\developer\fullcalendar\lang\vi.js" />
+    <Content Include="App_Themes\developer\fullcalendar\lang\zh-cn.js" />
+    <Content Include="App_Themes\developer\fullcalendar\lang\zh-tw.js" />
+    <Content Include="App_Themes\developer\fullcalendar\lib\cupertino\images\animated-overlay.gif" />
+    <Content Include="App_Themes\developer\fullcalendar\lib\cupertino\images\ui-bg_diagonals-thick_90_eeeeee_40x40.png" />
+    <Content Include="App_Themes\developer\fullcalendar\lib\cupertino\images\ui-bg_flat_15_cd0a0a_40x100.png" />
+    <Content Include="App_Themes\developer\fullcalendar\lib\cupertino\images\ui-bg_glass_100_e4f1fb_1x400.png" />
+    <Content Include="App_Themes\developer\fullcalendar\lib\cupertino\images\ui-bg_glass_50_3baae3_1x400.png" />
+    <Content Include="App_Themes\developer\fullcalendar\lib\cupertino\images\ui-bg_glass_80_d7ebf9_1x400.png" />
+    <Content Include="App_Themes\developer\fullcalendar\lib\cupertino\images\ui-bg_highlight-hard_100_f2f5f7_1x100.png" />
+    <Content Include="App_Themes\developer\fullcalendar\lib\cupertino\images\ui-bg_highlight-hard_70_000000_1x100.png" />
+    <Content Include="App_Themes\developer\fullcalendar\lib\cupertino\images\ui-bg_highlight-soft_100_deedf7_1x100.png" />
+    <Content Include="App_Themes\developer\fullcalendar\lib\cupertino\images\ui-bg_highlight-soft_25_ffef8f_1x100.png" />
+    <Content Include="App_Themes\developer\fullcalendar\lib\cupertino\images\ui-icons_2694e8_256x240.png" />
+    <Content Include="App_Themes\developer\fullcalendar\lib\cupertino\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="App_Themes\developer\fullcalendar\lib\cupertino\images\ui-icons_3d80b3_256x240.png" />
+    <Content Include="App_Themes\developer\fullcalendar\lib\cupertino\images\ui-icons_72a7cf_256x240.png" />
+    <Content Include="App_Themes\developer\fullcalendar\lib\cupertino\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="App_Themes\developer\fullcalendar\lib\cupertino\jquery-ui.min.css" />
+    <Content Include="App_Themes\developer\fullcalendar\lib\jquery-ui.custom.min.js" />
+    <Content Include="App_Themes\developer\fullcalendar\lib\jquery.min.js" />
+    <Content Include="App_Themes\developer\fullcalendar\lib\moment.min.js" />
+    <Content Include="App_Themes\developer\fullcalendar\license.txt" />
+    <Content Include="App_Themes\developer\iCheck-1.x\.gitignore" />
+    <Content Include="App_Themes\developer\iCheck-1.x\demo\css\banner.jpg" />
+    <Content Include="App_Themes\developer\iCheck-1.x\demo\css\custom.css" />
+    <Content Include="App_Themes\developer\iCheck-1.x\demo\css\icheck.png" />
+    <Content Include="App_Themes\developer\iCheck-1.x\demo\css\ie\arrow-bottom.png" />
+    <Content Include="App_Themes\developer\iCheck-1.x\demo\css\ie\arrow-top.png" />
+    <Content Include="App_Themes\developer\iCheck-1.x\demo\css\ie\header-line.png" />
+    <Content Include="App_Themes\developer\iCheck-1.x\demo\css\ie\icon-fork.png" />
+    <Content Include="App_Themes\developer\iCheck-1.x\demo\css\ie\icon-github.png" />
+    <Content Include="App_Themes\developer\iCheck-1.x\demo\css\ie\icon-lab.png" />
+    <Content Include="App_Themes\developer\iCheck-1.x\demo\css\ie\icon-options.png" />
+    <Content Include="App_Themes\developer\iCheck-1.x\demo\css\ie\icon-star.png" />
+    <Content Include="App_Themes\developer\iCheck-1.x\demo\css\montserrat-bold.svg" />
+    <Content Include="App_Themes\developer\iCheck-1.x\demo\css\montserrat-regular.svg" />
+    <Content Include="App_Themes\developer\iCheck-1.x\demo\css\normalize.css" />
+    <Content Include="App_Themes\developer\iCheck-1.x\demo\index.html" />
+    <Content Include="App_Themes\developer\iCheck-1.x\demo\js\custom.js" />
+    <Content Include="App_Themes\developer\iCheck-1.x\demo\js\custom.min.js" />
+    <Content Include="App_Themes\developer\iCheck-1.x\demo\js\jquery.js" />
+    <Content Include="App_Themes\developer\iCheck-1.x\demo\js\zepto.js" />
+    <Content Include="App_Themes\developer\iCheck-1.x\icheck.js" />
+    <Content Include="App_Themes\developer\iCheck-1.x\icheck.min.js" />
+    <Content Include="App_Themes\developer\iCheck-1.x\skins\all.css" />
+    <Content Include="App_Themes\developer\iCheck-1.x\skins\flat\aero%402x.png" />
+    <Content Include="App_Themes\developer\iCheck-1.x\skins\flat\aero.css" />
+    <Content Include="App_Themes\developer\iCheck-1.x\skins\flat\aero.png" />
+    <Content Include="App_Themes\developer\iCheck-1.x\skins\flat\blue%402x.png" />
+    <Content Include="App_Themes\developer\iCheck-1.x\skins\flat\blue.css" />
+    <Content Include="App_Themes\developer\iCheck-1.x\skins\flat\blue.png" />
+    <Content Include="App_Themes\developer\iCheck-1.x\skins\flat\flat%402x.png" />
+    <Content Include="App_Themes\developer\iCheck-1.x\skins\flat\flat.css" />
+    <Content Include="App_Themes\developer\iCheck-1.x\skins\flat\flat.png" />
+    <Content Include="App_Themes\developer\iCheck-1.x\skins\flat\green%402x.png" />
+    <Content Include="App_Themes\developer\iCheck-1.x\skins\flat\green.css" />
+    <Content Include="App_Themes\developer\iCheck-1.x\skins\flat\green.png" />
+    <Content Include="App_Themes\developer\iCheck-1.x\skins\flat\grey%402x.png" />
+    <Content Include="App_Themes\developer\iCheck-1.x\skins\flat\grey.css" />
+    <Content Include="App_Themes\developer\iCheck-1.x\skins\flat\grey.png" />
+    <Content Include="App_Themes\developer\iCheck-1.x\skins\flat\orange%402x.png" />
+    <Content Include="App_Themes\developer\iCheck-1.x\skins\flat\orange.css" />
+    <Content Include="App_Themes\developer\iCheck-1.x\skins\flat\orange.png" />
+    <Content Include="App_Themes\developer\iCheck-1.x\skins\flat\pink%402x.png" />
+    <Content Include="App_Themes\developer\iCheck-1.x\skins\flat\pink.css" />
+    <Content Include="App_Themes\developer\iCheck-1.x\skins\flat\pink.png" />
+    <Content Include="App_Themes\developer\iCheck-1.x\skins\flat\purple%402x.png" />
+    <Content Include="App_Themes\developer\iCheck-1.x\skins\flat\purple.css" />
+    <Content Include="App_Themes\developer\iCheck-1.x\skins\flat\purple.png" />
+    <Content Include="App_Themes\developer\iCheck-1.x\skins\flat\red%402x.png" />
+    <Content Include="App_Themes\developer\iCheck-1.x\skins\flat\red.css" />
+    <Content Include="App_Themes\developer\iCheck-1.x\skins\flat\red.png" />
+    <Content Include="App_Themes\developer\iCheck-1.x\skins\flat\yellow%402x.png" />
+    <Content Include="App_Themes\developer\iCheck-1.x\skins\flat\yellow.css" />
+    <Content Include="App_Themes\developer\iCheck-1.x\skins\flat\yellow.png" />
+    <Content Include="App_Themes\developer\iCheck-1.x\skins\flat\_all.css" />
+    <Content Include="App_Themes\developer\iCheck-1.x\skins\futurico\futurico%402x.png" />
+    <Content Include="App_Themes\developer\iCheck-1.x\skins\futurico\futurico.css" />
+    <Content Include="App_Themes\developer\iCheck-1.x\skins\futurico\futurico.png" />
+    <Content Include="App_Themes\developer\iCheck-1.x\skins\line\aero.css" />
+    <Content Include="App_Themes\developer\iCheck-1.x\skins\line\blue.css" />
+    <Content Include="App_Themes\developer\iCheck-1.x\skins\line\green.css" />
+    <Content Include="App_Themes\developer\iCheck-1.x\skins\line\grey.css" />
+    <Content Include="App_Themes\developer\iCheck-1.x\skins\line\line%402x.png" />
+    <Content Include="App_Themes\developer\iCheck-1.x\skins\line\line.css" />
+    <Content Include="App_Themes\developer\iCheck-1.x\skins\line\line.png" />
+    <Content Include="App_Themes\developer\iCheck-1.x\skins\line\orange.css" />
+    <Content Include="App_Themes\developer\iCheck-1.x\skins\line\pink.css" />
+    <Content Include="App_Themes\developer\iCheck-1.x\skins\line\purple.css" />
+    <Content Include="App_Themes\developer\iCheck-1.x\skins\line\red.css" />
+    <Content Include="App_Themes\developer\iCheck-1.x\skins\line\yellow.css" />
+    <Content Include="App_Themes\developer\iCheck-1.x\skins\line\_all.css" />
+    <Content Include="App_Themes\developer\iCheck-1.x\skins\minimal\aero%402x.png" />
+    <Content Include="App_Themes\developer\iCheck-1.x\skins\minimal\aero.css" />
+    <Content Include="App_Themes\developer\iCheck-1.x\skins\minimal\aero.png" />
+    <Content Include="App_Themes\developer\iCheck-1.x\skins\minimal\blue%402x.png" />
+    <Content Include="App_Themes\developer\iCheck-1.x\skins\minimal\blue.css" />
+    <Content Include="App_Themes\developer\iCheck-1.x\skins\minimal\blue.png" />
+    <Content Include="App_Themes\developer\iCheck-1.x\skins\minimal\green%402x.png" />
+    <Content Include="App_Themes\developer\iCheck-1.x\skins\minimal\green.css" />
+    <Content Include="App_Themes\developer\iCheck-1.x\skins\minimal\green.png" />
+    <Content Include="App_Themes\developer\iCheck-1.x\skins\minimal\grey%402x.png" />
+    <Content Include="App_Themes\developer\iCheck-1.x\skins\minimal\grey.css" />
+    <Content Include="App_Themes\developer\iCheck-1.x\skins\minimal\grey.png" />
+    <Content Include="App_Themes\developer\iCheck-1.x\skins\minimal\minimal%402x.png" />
+    <Content Include="App_Themes\developer\iCheck-1.x\skins\minimal\minimal.css" />
+    <Content Include="App_Themes\developer\iCheck-1.x\skins\minimal\minimal.png" />
+    <Content Include="App_Themes\developer\iCheck-1.x\skins\minimal\orange%402x.png" />
+    <Content Include="App_Themes\developer\iCheck-1.x\skins\minimal\orange.css" />
+    <Content Include="App_Themes\developer\iCheck-1.x\skins\minimal\orange.png" />
+    <Content Include="App_Themes\developer\iCheck-1.x\skins\minimal\pink%402x.png" />
+    <Content Include="App_Themes\developer\iCheck-1.x\skins\minimal\pink.css" />
+    <Content Include="App_Themes\developer\iCheck-1.x\skins\minimal\pink.png" />
+    <Content Include="App_Themes\developer\iCheck-1.x\skins\minimal\purple%402x.png" />
+    <Content Include="App_Themes\developer\iCheck-1.x\skins\minimal\purple.css" />
+    <Content Include="App_Themes\developer\iCheck-1.x\skins\minimal\purple.png" />
+    <Content Include="App_Themes\developer\iCheck-1.x\skins\minimal\red%402x.png" />
+    <Content Include="App_Themes\developer\iCheck-1.x\skins\minimal\red.css" />
+    <Content Include="App_Themes\developer\iCheck-1.x\skins\minimal\red.png" />
+    <Content Include="App_Themes\developer\iCheck-1.x\skins\minimal\yellow%402x.png" />
+    <Content Include="App_Themes\developer\iCheck-1.x\skins\minimal\yellow.css" />
+    <Content Include="App_Themes\developer\iCheck-1.x\skins\minimal\yellow.png" />
+    <Content Include="App_Themes\developer\iCheck-1.x\skins\minimal\_all.css" />
+    <Content Include="App_Themes\developer\iCheck-1.x\skins\polaris\polaris%402x.png" />
+    <Content Include="App_Themes\developer\iCheck-1.x\skins\polaris\polaris.css" />
+    <Content Include="App_Themes\developer\iCheck-1.x\skins\polaris\polaris.png" />
+    <Content Include="App_Themes\developer\iCheck-1.x\skins\square\aero%402x.png" />
+    <Content Include="App_Themes\developer\iCheck-1.x\skins\square\aero.css" />
+    <Content Include="App_Themes\developer\iCheck-1.x\skins\square\aero.png" />
+    <Content Include="App_Themes\developer\iCheck-1.x\skins\square\blue%402x.png" />
+    <Content Include="App_Themes\developer\iCheck-1.x\skins\square\blue.css" />
+    <Content Include="App_Themes\developer\iCheck-1.x\skins\square\blue.png" />
+    <Content Include="App_Themes\developer\iCheck-1.x\skins\square\green%402x.png" />
+    <Content Include="App_Themes\developer\iCheck-1.x\skins\square\green.css" />
+    <Content Include="App_Themes\developer\iCheck-1.x\skins\square\green.png" />
+    <Content Include="App_Themes\developer\iCheck-1.x\skins\square\grey%402x.png" />
+    <Content Include="App_Themes\developer\iCheck-1.x\skins\square\grey.css" />
+    <Content Include="App_Themes\developer\iCheck-1.x\skins\square\grey.png" />
+    <Content Include="App_Themes\developer\iCheck-1.x\skins\square\orange%402x.png" />
+    <Content Include="App_Themes\developer\iCheck-1.x\skins\square\orange.css" />
+    <Content Include="App_Themes\developer\iCheck-1.x\skins\square\orange.png" />
+    <Content Include="App_Themes\developer\iCheck-1.x\skins\square\pink%402x.png" />
+    <Content Include="App_Themes\developer\iCheck-1.x\skins\square\pink.css" />
+    <Content Include="App_Themes\developer\iCheck-1.x\skins\square\pink.png" />
+    <Content Include="App_Themes\developer\iCheck-1.x\skins\square\purple%402x.png" />
+    <Content Include="App_Themes\developer\iCheck-1.x\skins\square\purple.css" />
+    <Content Include="App_Themes\developer\iCheck-1.x\skins\square\purple.png" />
+    <Content Include="App_Themes\developer\iCheck-1.x\skins\square\red%402x.png" />
+    <Content Include="App_Themes\developer\iCheck-1.x\skins\square\red.css" />
+    <Content Include="App_Themes\developer\iCheck-1.x\skins\square\red.png" />
+    <Content Include="App_Themes\developer\iCheck-1.x\skins\square\square%402x.png" />
+    <Content Include="App_Themes\developer\iCheck-1.x\skins\square\square.css" />
+    <Content Include="App_Themes\developer\iCheck-1.x\skins\square\square.png" />
+    <Content Include="App_Themes\developer\iCheck-1.x\skins\square\yellow%402x.png" />
+    <Content Include="App_Themes\developer\iCheck-1.x\skins\square\yellow.css" />
+    <Content Include="App_Themes\developer\iCheck-1.x\skins\square\yellow.png" />
+    <Content Include="App_Themes\developer\iCheck-1.x\skins\square\_all.css" />
+    <Content Include="App_Themes\developer\icheck\icheck.min.js" />
+    <Content Include="App_Themes\developer\icheck\square\aero%402x.png" />
+    <Content Include="App_Themes\developer\icheck\square\aero.css" />
+    <Content Include="App_Themes\developer\icheck\square\aero.png" />
+    <Content Include="App_Themes\developer\icheck\square\blue%402x.png" />
+    <Content Include="App_Themes\developer\icheck\square\blue.css" />
+    <Content Include="App_Themes\developer\icheck\square\blue.png" />
+    <Content Include="App_Themes\developer\icheck\square\green%402x.png" />
+    <Content Include="App_Themes\developer\icheck\square\green.css" />
+    <Content Include="App_Themes\developer\icheck\square\green.png" />
+    <Content Include="App_Themes\developer\icheck\square\grey%402x.png" />
+    <Content Include="App_Themes\developer\icheck\square\grey.css" />
+    <Content Include="App_Themes\developer\icheck\square\grey.png" />
+    <Content Include="App_Themes\developer\icheck\square\orange%402x.png" />
+    <Content Include="App_Themes\developer\icheck\square\orange.css" />
+    <Content Include="App_Themes\developer\icheck\square\orange.png" />
+    <Content Include="App_Themes\developer\icheck\square\pink%402x.png" />
+    <Content Include="App_Themes\developer\icheck\square\pink.css" />
+    <Content Include="App_Themes\developer\icheck\square\pink.png" />
+    <Content Include="App_Themes\developer\icheck\square\purple%402x.png" />
+    <Content Include="App_Themes\developer\icheck\square\purple.css" />
+    <Content Include="App_Themes\developer\icheck\square\purple.png" />
+    <Content Include="App_Themes\developer\icheck\square\red%402x.png" />
+    <Content Include="App_Themes\developer\icheck\square\red.css" />
+    <Content Include="App_Themes\developer\icheck\square\red.png" />
+    <Content Include="App_Themes\developer\icheck\square\square%402x.png" />
+    <Content Include="App_Themes\developer\icheck\square\square.css" />
+    <Content Include="App_Themes\developer\icheck\square\square.png" />
+    <Content Include="App_Themes\developer\icheck\square\yellow%402x.png" />
+    <Content Include="App_Themes\developer\icheck\square\yellow.css" />
+    <Content Include="App_Themes\developer\icheck\square\yellow.png" />
+    <Content Include="App_Themes\developer\icheck\square\_all.css" />
+    <Content Include="App_Themes\developer\iealert\css\bg.png" />
+    <Content Include="App_Themes\developer\iealert\css\iealertsprite.png" />
+    <Content Include="App_Themes\developer\iealert\css\style.css" />
+    <Content Include="App_Themes\developer\iealert\demo.html" />
+    <Content Include="App_Themes\developer\iealert\js\iealert.js" />
+    <Content Include="App_Themes\developer\jeasyui\jquery.easyui.min.js" />
+    <Content Include="App_Themes\developer\jeasyui\themes\black\accordion.css" />
+    <Content Include="App_Themes\developer\jeasyui\themes\black\calendar.css" />
+    <Content Include="App_Themes\developer\jeasyui\themes\black\combo.css" />
+    <Content Include="App_Themes\developer\jeasyui\themes\black\combobox.css" />
+    <Content Include="App_Themes\developer\jeasyui\themes\black\datagrid.css" />
+    <Content Include="App_Themes\developer\jeasyui\themes\black\datebox.css" />
+    <Content Include="App_Themes\developer\jeasyui\themes\black\dialog.css" />
+    <Content Include="App_Themes\developer\jeasyui\themes\black\easyui.css" />
+    <Content Include="App_Themes\developer\jeasyui\themes\black\images\accordion_arrows.png" />
+    <Content Include="App_Themes\developer\jeasyui\themes\black\images\blank.gif" />
+    <Content Include="App_Themes\developer\jeasyui\themes\black\images\calendar_arrows.png" />
+    <Content Include="App_Themes\developer\jeasyui\themes\black\images\combo_arrow.png" />
+    <Content Include="App_Themes\developer\jeasyui\themes\black\images\datagrid_icons.png" />
+    <Content Include="App_Themes\developer\jeasyui\themes\black\images\datebox_arrow.png" />
+    <Content Include="App_Themes\developer\jeasyui\themes\black\images\layout_arrows.png" />
+    <Content Include="App_Themes\developer\jeasyui\themes\black\images\linkbutton_bg.png" />
+    <Content Include="App_Themes\developer\jeasyui\themes\black\images\loading.gif" />
+    <Content Include="App_Themes\developer\jeasyui\themes\black\images\menu_arrows.png" />
+    <Content Include="App_Themes\developer\jeasyui\themes\black\images\messager_icons.png" />
+    <Content Include="App_Themes\developer\jeasyui\themes\black\images\pagination_icons.png" />
+    <Content Include="App_Themes\developer\jeasyui\themes\black\images\panel_tools.png" />
+    <Content Include="App_Themes\developer\jeasyui\themes\black\images\searchbox_button.png" />
+    <Content Include="App_Themes\developer\jeasyui\themes\black\images\slider_handle.png" />
+    <Content Include="App_Themes\developer\jeasyui\themes\black\images\spinner_arrows.png" />
+    <Content Include="App_Themes\developer\jeasyui\themes\black\images\tabs_icons.png" />
+    <Content Include="App_Themes\developer\jeasyui\themes\black\images\tree_icons.png" />
+    <Content Include="App_Themes\developer\jeasyui\themes\black\images\validatebox_warning.png" />
+    <Content Include="App_Themes\developer\jeasyui\themes\black\layout.css" />
+    <Content Include="App_Themes\developer\jeasyui\themes\black\linkbutton.css" />
+    <Content Include="App_Themes\developer\jeasyui\themes\black\menu.css" />
+    <Content Include="App_Themes\developer\jeasyui\themes\black\menubutton.css" />
+    <Content Include="App_Themes\developer\jeasyui\themes\black\messager.css" />
+    <Content Include="App_Themes\developer\jeasyui\themes\black\pagination.css" />
+    <Content Include="App_Themes\developer\jeasyui\themes\black\panel.css" />
+    <Content Include="App_Themes\developer\jeasyui\themes\black\progressbar.css" />
+    <Content Include="App_Themes\developer\jeasyui\themes\black\propertygrid.css" />
+    <Content Include="App_Themes\developer\jeasyui\themes\black\searchbox.css" />
+    <Content Include="App_Themes\developer\jeasyui\themes\black\slider.css" />
+    <Content Include="App_Themes\developer\jeasyui\themes\black\spinner.css" />
+    <Content Include="App_Themes\developer\jeasyui\themes\black\splitbutton.css" />
+    <Content Include="App_Themes\developer\jeasyui\themes\black\tabs.css" />
+    <Content Include="App_Themes\developer\jeasyui\themes\black\tooltip.css" />
+    <Content Include="App_Themes\developer\jeasyui\themes\black\tree.css" />
+    <Content Include="App_Themes\developer\jeasyui\themes\black\validatebox.css" />
+    <Content Include="App_Themes\developer\jeasyui\themes\black\window.css" />
+    <Content Include="App_Themes\developer\jeasyui\themes\bootstrap\accordion.css" />
+    <Content Include="App_Themes\developer\jeasyui\themes\bootstrap\calendar.css" />
+    <Content Include="App_Themes\developer\jeasyui\themes\bootstrap\combo.css" />
+    <Content Include="App_Themes\developer\jeasyui\themes\bootstrap\combobox.css" />
+    <Content Include="App_Themes\developer\jeasyui\themes\bootstrap\datagrid.css" />
+    <Content Include="App_Themes\developer\jeasyui\themes\bootstrap\datebox.css" />
+    <Content Include="App_Themes\developer\jeasyui\themes\bootstrap\dialog.css" />
+    <Content Include="App_Themes\developer\jeasyui\themes\bootstrap\easyui.css" />
+    <Content Include="App_Themes\developer\jeasyui\themes\bootstrap\images\accordion_arrows.png" />
+    <Content Include="App_Themes\developer\jeasyui\themes\bootstrap\images\blank.gif" />
+    <Content Include="App_Themes\developer\jeasyui\themes\bootstrap\images\calendar_arrows.png" />
+    <Content Include="App_Themes\developer\jeasyui\themes\bootstrap\images\combo_arrow.png" />
+    <Content Include="App_Themes\developer\jeasyui\themes\bootstrap\images\datagrid_icons.png" />
+    <Content Include="App_Themes\developer\jeasyui\themes\bootstrap\images\datebox_arrow.png" />
+    <Content Include="App_Themes\developer\jeasyui\themes\bootstrap\images\layout_arrows.png" />
+    <Content Include="App_Themes\developer\jeasyui\themes\bootstrap\images\linkbutton_bg.png" />
+    <Content Include="App_Themes\developer\jeasyui\themes\bootstrap\images\loading.gif" />
+    <Content Include="App_Themes\developer\jeasyui\themes\bootstrap\images\menu_arrows.png" />
+    <Content Include="App_Themes\developer\jeasyui\themes\bootstrap\images\messager_icons.png" />
+    <Content Include="App_Themes\developer\jeasyui\themes\bootstrap\images\pagination_icons.png" />
+    <Content Include="App_Themes\developer\jeasyui\themes\bootstrap\images\panel_tools.png" />
+    <Content Include="App_Themes\developer\jeasyui\themes\bootstrap\images\searchbox_button.png" />
+    <Content Include="App_Themes\developer\jeasyui\themes\bootstrap\images\slider_handle.png" />
+    <Content Include="App_Themes\developer\jeasyui\themes\bootstrap\images\spinner_arrows.png" />
+    <Content Include="App_Themes\developer\jeasyui\themes\bootstrap\images\tabs_icons.png" />
+    <Content Include="App_Themes\developer\jeasyui\themes\bootstrap\images\tree_icons.png" />
+    <Content Include="App_Themes\developer\jeasyui\themes\bootstrap\images\validatebox_warning.png" />
+    <Content Include="App_Themes\developer\jeasyui\themes\bootstrap\layout.css" />
+    <Content Include="App_Themes\developer\jeasyui\themes\bootstrap\linkbutton.css" />
+    <Content Include="App_Themes\developer\jeasyui\themes\bootstrap\menu.css" />
+    <Content Include="App_Themes\developer\jeasyui\themes\bootstrap\menubutton.css" />
+    <Content Include="App_Themes\developer\jeasyui\themes\bootstrap\messager.css" />
+    <Content Include="App_Themes\developer\jeasyui\themes\bootstrap\pagination.css" />
+    <Content Include="App_Themes\developer\jeasyui\themes\bootstrap\panel.css" />
+    <Content Include="App_Themes\developer\jeasyui\themes\bootstrap\progressbar.css" />
+    <Content Include="App_Themes\developer\jeasyui\themes\bootstrap\propertygrid.css" />
+    <Content Include="App_Themes\developer\jeasyui\themes\bootstrap\searchbox.css" />
+    <Content Include="App_Themes\developer\jeasyui\themes\bootstrap\slider.css" />
+    <Content Include="App_Themes\developer\jeasyui\themes\bootstrap\spinner.css" />
+    <Content Include="App_Themes\developer\jeasyui\themes\bootstrap\splitbutton.css" />
+    <Content Include="App_Themes\developer\jeasyui\themes\bootstrap\tabs.css" />
+    <Content Include="App_Themes\developer\jeasyui\themes\bootstrap\tooltip.css" />
+    <Content Include="App_Themes\developer\jeasyui\themes\bootstrap\tree.css" />
+    <Content Include="App_Themes\developer\jeasyui\themes\bootstrap\validatebox.css" />
+    <Content Include="App_Themes\developer\jeasyui\themes\bootstrap\window.css" />
+    <Content Include="App_Themes\developer\jeasyui\themes\default\accordion.css" />
+    <Content Include="App_Themes\developer\jeasyui\themes\default\calendar.css" />
+    <Content Include="App_Themes\developer\jeasyui\themes\default\combo.css" />
+    <Content Include="App_Themes\developer\jeasyui\themes\default\combobox.css" />
+    <Content Include="App_Themes\developer\jeasyui\themes\default\datagrid.css" />
+    <Content Include="App_Themes\developer\jeasyui\themes\default\datebox.css" />
+    <Content Include="App_Themes\developer\jeasyui\themes\default\dialog.css" />
+    <Content Include="App_Themes\developer\jeasyui\themes\default\easyui.css" />
+    <Content Include="App_Themes\developer\jeasyui\themes\default\images\accordion_arrows.png" />
+    <Content Include="App_Themes\developer\jeasyui\themes\default\images\blank.gif" />
+    <Content Include="App_Themes\developer\jeasyui\themes\default\images\calendar_arrows.png" />
+    <Content Include="App_Themes\developer\jeasyui\themes\default\images\combo_arrow.png" />
+    <Content Include="App_Themes\developer\jeasyui\themes\default\images\datagrid_icons.png" />
+    <Content Include="App_Themes\developer\jeasyui\themes\default\images\datebox_arrow.png" />
+    <Content Include="App_Themes\developer\jeasyui\themes\default\images\layout_arrows.png" />
+    <Content Include="App_Themes\developer\jeasyui\themes\default\images\linkbutton_bg.png" />
+    <Content Include="App_Themes\developer\jeasyui\themes\default\images\loading.gif" />
+    <Content Include="App_Themes\developer\jeasyui\themes\default\images\menu_arrows.png" />
+    <Content Include="App_Themes\developer\jeasyui\themes\default\images\messager_icons.png" />
+    <Content Include="App_Themes\developer\jeasyui\themes\default\images\pagination_icons.png" />
+    <Content Include="App_Themes\developer\jeasyui\themes\default\images\panel_tools.png" />
+    <Content Include="App_Themes\developer\jeasyui\themes\default\images\searchbox_button.png" />
+    <Content Include="App_Themes\developer\jeasyui\themes\default\images\slider_handle.png" />
+    <Content Include="App_Themes\developer\jeasyui\themes\default\images\spinner_arrows.png" />
+    <Content Include="App_Themes\developer\jeasyui\themes\default\images\tabs_icons.png" />
+    <Content Include="App_Themes\developer\jeasyui\themes\default\images\tree_icons.png" />
+    <Content Include="App_Themes\developer\jeasyui\themes\default\images\validatebox_warning.png" />
+    <Content Include="App_Themes\developer\jeasyui\themes\default\layout.css" />
+    <Content Include="App_Themes\developer\jeasyui\themes\default\linkbutton.css" />
+    <Content Include="App_Themes\developer\jeasyui\themes\default\menu.css" />
+    <Content Include="App_Themes\developer\jeasyui\themes\default\menubutton.css" />
+    <Content Include="App_Themes\developer\jeasyui\themes\default\messager.css" />
+    <Content Include="App_Themes\developer\jeasyui\themes\default\pagination.css" />
+    <Content Include="App_Themes\developer\jeasyui\themes\default\panel.css" />
+    <Content Include="App_Themes\developer\jeasyui\themes\default\progressbar.css" />
+    <Content Include="App_Themes\developer\jeasyui\themes\default\propertygrid.css" />
+    <Content Include="App_Themes\developer\jeasyui\themes\default\searchbox.css" />
+    <Content Include="App_Themes\developer\jeasyui\themes\default\slider.css" />
+    <Content Include="App_Themes\developer\jeasyui\themes\default\spinner.css" />
+    <Content Include="App_Themes\developer\jeasyui\themes\default\splitbutton.css" />
+    <Content Include="App_Themes\developer\jeasyui\themes\default\tabs.css" />
+    <Content Include="App_Themes\developer\jeasyui\themes\default\tooltip.css" />
+    <Content Include="App_Themes\developer\jeasyui\themes\default\tree.css" />
+    <Content Include="App_Themes\developer\jeasyui\themes\default\validatebox.css" />
+    <Content Include="App_Themes\developer\jeasyui\themes\default\window.css" />
+    <Content Include="App_Themes\developer\jeasyui\themes\gray\accordion.css" />
+    <Content Include="App_Themes\developer\jeasyui\themes\gray\calendar.css" />
+    <Content Include="App_Themes\developer\jeasyui\themes\gray\combo.css" />
+    <Content Include="App_Themes\developer\jeasyui\themes\gray\combobox.css" />
+    <Content Include="App_Themes\developer\jeasyui\themes\gray\datagrid.css" />
+    <Content Include="App_Themes\developer\jeasyui\themes\gray\datebox.css" />
+    <Content Include="App_Themes\developer\jeasyui\themes\gray\dialog.css" />
+    <Content Include="App_Themes\developer\jeasyui\themes\gray\easyui.css" />
+    <Content Include="App_Themes\developer\jeasyui\themes\gray\images\accordion_arrows.png" />
+    <Content Include="App_Themes\developer\jeasyui\themes\gray\images\blank.gif" />
+    <Content Include="App_Themes\developer\jeasyui\themes\gray\images\calendar_arrows.png" />
+    <Content Include="App_Themes\developer\jeasyui\themes\gray\images\combo_arrow.png" />
+    <Content Include="App_Themes\developer\jeasyui\themes\gray\images\datagrid_icons.png" />
+    <Content Include="App_Themes\developer\jeasyui\themes\gray\images\datebox_arrow.png" />
+    <Content Include="App_Themes\developer\jeasyui\themes\gray\images\layout_arrows.png" />
+    <Content Include="App_Themes\developer\jeasyui\themes\gray\images\linkbutton_bg.png" />
+    <Content Include="App_Themes\developer\jeasyui\themes\gray\images\loading.gif" />
+    <Content Include="App_Themes\developer\jeasyui\themes\gray\images\menu_arrows.png" />
+    <Content Include="App_Themes\developer\jeasyui\themes\gray\images\messager_icons.png" />
+    <Content Include="App_Themes\developer\jeasyui\themes\gray\images\pagination_icons.png" />
+    <Content Include="App_Themes\developer\jeasyui\themes\gray\images\panel_tools.png" />
+    <Content Include="App_Themes\developer\jeasyui\themes\gray\images\searchbox_button.png" />
+    <Content Include="App_Themes\developer\jeasyui\themes\gray\images\slider_handle.png" />
+    <Content Include="App_Themes\developer\jeasyui\themes\gray\images\spinner_arrows.png" />
+    <Content Include="App_Themes\developer\jeasyui\themes\gray\images\tabs_icons.png" />
+    <Content Include="App_Themes\developer\jeasyui\themes\gray\images\tree_icons.png" />
+    <Content Include="App_Themes\developer\jeasyui\themes\gray\images\validatebox_warning.png" />
+    <Content Include="App_Themes\developer\jeasyui\themes\gray\layout.css" />
+    <Content Include="App_Themes\developer\jeasyui\themes\gray\linkbutton.css" />
+    <Content Include="App_Themes\developer\jeasyui\themes\gray\menu.css" />
+    <Content Include="App_Themes\developer\jeasyui\themes\gray\menubutton.css" />
+    <Content Include="App_Themes\developer\jeasyui\themes\gray\messager.css" />
+    <Content Include="App_Themes\developer\jeasyui\themes\gray\pagination.css" />
+    <Content Include="App_Themes\developer\jeasyui\themes\gray\panel.css" />
+    <Content Include="App_Themes\developer\jeasyui\themes\gray\progressbar.css" />
+    <Content Include="App_Themes\developer\jeasyui\themes\gray\propertygrid.css" />
+    <Content Include="App_Themes\developer\jeasyui\themes\gray\searchbox.css" />
+    <Content Include="App_Themes\developer\jeasyui\themes\gray\slider.css" />
+    <Content Include="App_Themes\developer\jeasyui\themes\gray\spinner.css" />
+    <Content Include="App_Themes\developer\jeasyui\themes\gray\splitbutton.css" />
+    <Content Include="App_Themes\developer\jeasyui\themes\gray\tabs.css" />
+    <Content Include="App_Themes\developer\jeasyui\themes\gray\tooltip.css" />
+    <Content Include="App_Themes\developer\jeasyui\themes\gray\tree.css" />
+    <Content Include="App_Themes\developer\jeasyui\themes\gray\validatebox.css" />
+    <Content Include="App_Themes\developer\jeasyui\themes\gray\window.css" />
+    <Content Include="App_Themes\developer\jeasyui\themes\icon.css" />
+    <Content Include="App_Themes\developer\jeasyui\themes\icons\back.png" />
+    <Content Include="App_Themes\developer\jeasyui\themes\icons\blank.gif" />
+    <Content Include="App_Themes\developer\jeasyui\themes\icons\cancel.png" />
+    <Content Include="App_Themes\developer\jeasyui\themes\icons\cut.png" />
+    <Content Include="App_Themes\developer\jeasyui\themes\icons\edit_add.png" />
+    <Content Include="App_Themes\developer\jeasyui\themes\icons\edit_remove.png" />
+    <Content Include="App_Themes\developer\jeasyui\themes\icons\filesave.png" />
+    <Content Include="App_Themes\developer\jeasyui\themes\icons\filter.png" />
+    <Content Include="App_Themes\developer\jeasyui\themes\icons\help.png" />
+    <Content Include="App_Themes\developer\jeasyui\themes\icons\mini_add.png" />
+    <Content Include="App_Themes\developer\jeasyui\themes\icons\mini_edit.png" />
+    <Content Include="App_Themes\developer\jeasyui\themes\icons\mini_refresh.png" />
+    <Content Include="App_Themes\developer\jeasyui\themes\icons\no.png" />
+    <Content Include="App_Themes\developer\jeasyui\themes\icons\ok.png" />
+    <Content Include="App_Themes\developer\jeasyui\themes\icons\pencil.png" />
+    <Content Include="App_Themes\developer\jeasyui\themes\icons\print.png" />
+    <Content Include="App_Themes\developer\jeasyui\themes\icons\redo.png" />
+    <Content Include="App_Themes\developer\jeasyui\themes\icons\reload.png" />
+    <Content Include="App_Themes\developer\jeasyui\themes\icons\search.png" />
+    <Content Include="App_Themes\developer\jeasyui\themes\icons\sum.png" />
+    <Content Include="App_Themes\developer\jeasyui\themes\icons\tip.png" />
+    <Content Include="App_Themes\developer\jeasyui\themes\icons\undo.png" />
+    <Content Include="App_Themes\developer\jeasyui\themes\metro\accordion.css" />
+    <Content Include="App_Themes\developer\jeasyui\themes\metro\calendar.css" />
+    <Content Include="App_Themes\developer\jeasyui\themes\metro\combo.css" />
+    <Content Include="App_Themes\developer\jeasyui\themes\metro\combobox.css" />
+    <Content Include="App_Themes\developer\jeasyui\themes\metro\datagrid.css" />
+    <Content Include="App_Themes\developer\jeasyui\themes\metro\datebox.css" />
+    <Content Include="App_Themes\developer\jeasyui\themes\metro\dialog.css" />
+    <Content Include="App_Themes\developer\jeasyui\themes\metro\easyui-gray.css" />
+    <Content Include="App_Themes\developer\jeasyui\themes\metro\easyui-green.css" />
+    <Content Include="App_Themes\developer\jeasyui\themes\metro\easyui.css" />
+    <Content Include="App_Themes\developer\jeasyui\themes\metro\images\accordion_arrows.png" />
+    <Content Include="App_Themes\developer\jeasyui\themes\metro\images\blank.gif" />
+    <Content Include="App_Themes\developer\jeasyui\themes\metro\images\calendar_arrows.png" />
+    <Content Include="App_Themes\developer\jeasyui\themes\metro\images\combo_arrow.png" />
+    <Content Include="App_Themes\developer\jeasyui\themes\metro\images\datagrid_icons.png" />
+    <Content Include="App_Themes\developer\jeasyui\themes\metro\images\datebox_arrow.png" />
+    <Content Include="App_Themes\developer\jeasyui\themes\metro\images\layout_arrows.png" />
+    <Content Include="App_Themes\developer\jeasyui\themes\metro\images\linkbutton_bg.png" />
+    <Content Include="App_Themes\developer\jeasyui\themes\metro\images\loading.gif" />
+    <Content Include="App_Themes\developer\jeasyui\themes\metro\images\menu_arrows.png" />
+    <Content Include="App_Themes\developer\jeasyui\themes\metro\images\messager_icons.png" />
+    <Content Include="App_Themes\developer\jeasyui\themes\metro\images\pagination_icons.png" />
+    <Content Include="App_Themes\developer\jeasyui\themes\metro\images\panel_tools.png" />
+    <Content Include="App_Themes\developer\jeasyui\themes\metro\images\searchbox_button.png" />
+    <Content Include="App_Themes\developer\jeasyui\themes\metro\images\slider_handle.png" />
+    <Content Include="App_Themes\developer\jeasyui\themes\metro\images\spinner_arrows.png" />
+    <Content Include="App_Themes\developer\jeasyui\themes\metro\images\tabs_icons.png" />
+    <Content Include="App_Themes\developer\jeasyui\themes\metro\images\tree_icons.png" />
+    <Content Include="App_Themes\developer\jeasyui\themes\metro\images\validatebox_warning.png" />
+    <Content Include="App_Themes\developer\jeasyui\themes\metro\layout.css" />
+    <Content Include="App_Themes\developer\jeasyui\themes\metro\linkbutton.css" />
+    <Content Include="App_Themes\developer\jeasyui\themes\metro\menu.css" />
+    <Content Include="App_Themes\developer\jeasyui\themes\metro\menubutton.css" />
+    <Content Include="App_Themes\developer\jeasyui\themes\metro\messager.css" />
+    <Content Include="App_Themes\developer\jeasyui\themes\metro\pagination.css" />
+    <Content Include="App_Themes\developer\jeasyui\themes\metro\panel.css" />
+    <Content Include="App_Themes\developer\jeasyui\themes\metro\progressbar.css" />
+    <Content Include="App_Themes\developer\jeasyui\themes\metro\propertygrid.css" />
+    <Content Include="App_Themes\developer\jeasyui\themes\metro\searchbox.css" />
+    <Content Include="App_Themes\developer\jeasyui\themes\metro\slider.css" />
+    <Content Include="App_Themes\developer\jeasyui\themes\metro\spinner.css" />
+    <Content Include="App_Themes\developer\jeasyui\themes\metro\splitbutton.css" />
+    <Content Include="App_Themes\developer\jeasyui\themes\metro\tabs.css" />
+    <Content Include="App_Themes\developer\jeasyui\themes\metro\tooltip.css" />
+    <Content Include="App_Themes\developer\jeasyui\themes\metro\tree.css" />
+    <Content Include="App_Themes\developer\jeasyui\themes\metro\validatebox.css" />
+    <Content Include="App_Themes\developer\jeasyui\themes\metro\window.css" />
+    <Content Include="App_Themes\developer\jqueryStart\img\star_v2.png" />
+    <Content Include="App_Themes\developer\js\jquery-1.8.3.min.js" />
+    <Content Include="App_Themes\developer\My97DatePicker\calendar.js" />
+    <Content Include="App_Themes\developer\My97DatePicker\lang\en.js" />
+    <Content Include="App_Themes\developer\My97DatePicker\lang\zh-cn.js" />
+    <Content Include="App_Themes\developer\My97DatePicker\lang\zh-tw.js" />
+    <Content Include="App_Themes\developer\My97DatePicker\skin\datePicker.gif" />
+    <Content Include="App_Themes\developer\My97DatePicker\skin\default\datepicker.css" />
+    <Content Include="App_Themes\developer\My97DatePicker\skin\default\img.gif" />
+    <Content Include="App_Themes\developer\My97DatePicker\skin\WdatePicker.css" />
+    <Content Include="App_Themes\developer\My97DatePicker\skin\whyGreen\bg.jpg" />
+    <Content Include="App_Themes\developer\My97DatePicker\skin\whyGreen\datepicker.css" />
+    <Content Include="App_Themes\developer\My97DatePicker\skin\whyGreen\img.gif" />
+    <Content Include="App_Themes\developer\My97DatePicker\WdatePicker.js" />
+    <Content Include="App_Themes\developer\My97DatePicker\开发包\lang\en.js" />
+    <Content Include="App_Themes\developer\My97DatePicker\开发包\lang\zh-cn.js" />
+    <Content Include="App_Themes\developer\My97DatePicker\开发包\lang\zh-tw.js" />
+    <Content Include="App_Themes\developer\My97DatePicker\开发包\readme.txt" />
+    <Content Include="App_Themes\developer\My97DatePicker\开发包\skin\datePicker.gif" />
+    <Content Include="App_Themes\developer\My97DatePicker\开发包\skin\default\datepicker.css" />
+    <Content Include="App_Themes\developer\My97DatePicker\开发包\skin\default\img.gif" />
+    <Content Include="App_Themes\developer\My97DatePicker\开发包\skin\WdatePicker.css" />
+    <Content Include="App_Themes\developer\My97DatePicker\开发包\skin\whyGreen\bg.jpg" />
+    <Content Include="App_Themes\developer\My97DatePicker\开发包\skin\whyGreen\datepicker.css" />
+    <Content Include="App_Themes\developer\My97DatePicker\开发包\skin\whyGreen\img.gif" />
+    <Content Include="App_Themes\Image\10525578.gif" />
+    <Content Include="App_Themes\Image\5595.jpg" />
+    <Content Include="App_Themes\Image\av1.png" />
+    <Content Include="App_Themes\Image\av6.png" />
+    <Content Include="App_Themes\Image\images\1991572_105207052_2.jpg" />
+    <Content Include="App_Themes\Image\images\230.ico" />
+    <Content Include="App_Themes\Image\images\231.ico" />
+    <Content Include="App_Themes\Image\images\232.ico" />
+    <Content Include="App_Themes\Image\images\233.ico" />
+    <Content Include="App_Themes\Image\images\234.ico" />
+    <Content Include="App_Themes\Image\images\235.ico" />
+    <Content Include="App_Themes\Image\images\236.ico" />
+    <Content Include="App_Themes\Image\images\237.ico" />
+    <Content Include="App_Themes\Image\images\238.ico" />
+    <Content Include="App_Themes\Image\images\239.ico" />
+    <Content Include="App_Themes\Image\images\240.ico" />
+    <Content Include="App_Themes\Image\images\241.ico" />
+    <Content Include="App_Themes\Image\images\78809.gif" />
+    <Content Include="App_Themes\Image\images\cancel.png" />
+    <Content Include="App_Themes\Image\images\Carousel\0.jpg" />
+    <Content Include="App_Themes\Image\images\Carousel\1.jpg" />
+    <Content Include="App_Themes\Image\images\Carousel\2.jpg" />
+    <Content Include="App_Themes\Image\images\Carousel\3.jpg" />
+    <Content Include="App_Themes\Image\images\Carousel\4.jpg" />
+    <Content Include="App_Themes\Image\images\Carousel\5.jpg" />
+    <Content Include="App_Themes\Image\images\iconpng.png" />
+    <Content Include="App_Themes\Image\images\iconpng2.ico" />
+    <Content Include="App_Themes\Image\images\iconpngCAAR7PV1.png" />
+    <Content Include="App_Themes\Image\images\images\ftb\folder.big.gif" />
+    <Content Include="App_Themes\Image\images\images\ftb\folder.small.gif" />
+    <Content Include="App_Themes\Image\images\images\ftb\folder.up.gif" />
+    <Content Include="App_Themes\Image\images\images\ftb\office2000\bold.gif" />
+    <Content Include="App_Themes\Image\images\images\ftb\office2000\bullets.gif" />
+    <Content Include="App_Themes\Image\images\images\ftb\office2000\center.gif" />
+    <Content Include="App_Themes\Image\images\images\ftb\office2000\copy.gif" />
+    <Content Include="App_Themes\Image\images\images\ftb\office2000\createlink.gif" />
+    <Content Include="App_Themes\Image\images\images\ftb\office2000\cut.gif" />
+    <Content Include="App_Themes\Image\images\images\ftb\office2000\deletetablecolumn.gif" />
+    <Content Include="App_Themes\Image\images\images\ftb\office2000\deletetablerow.gif" />
+    <Content Include="App_Themes\Image\images\images\ftb\office2000\fontbackcolorpicker.gif" />
+    <Content Include="App_Themes\Image\images\images\ftb\office2000\fontforecolorpicker.gif" />
+    <Content Include="App_Themes\Image\images\images\ftb\office2000\indent.gif" />
+    <Content Include="App_Themes\Image\images\images\ftb\office2000\insertdate.gif" />
+    <Content Include="App_Themes\Image\images\images\ftb\office2000\insertimage.gif" />
+    <Content Include="App_Themes\Image\images\images\ftb\office2000\insertimagefromgallery.gif" />
+    <Content Include="App_Themes\Image\images\images\ftb\office2000\insertrule.gif" />
+    <Content Include="App_Themes\Image\images\images\ftb\office2000\inserttable.gif" />
+    <Content Include="App_Themes\Image\images\images\ftb\office2000\inserttablecolumn.gif" />
+    <Content Include="App_Themes\Image\images\images\ftb\office2000\inserttablerow.gif" />
+    <Content Include="App_Themes\Image\images\images\ftb\office2000\inserttime.gif" />
+    <Content Include="App_Themes\Image\images\images\ftb\office2000\italic.gif" />
+    <Content Include="App_Themes\Image\images\images\ftb\office2000\justifycenter.gif" />
+    <Content Include="App_Themes\Image\images\images\ftb\office2000\justifyfull.gif" />
+    <Content Include="App_Themes\Image\images\images\ftb\office2000\justifyleft.gif" />
+    <Content Include="App_Themes\Image\images\images\ftb\office2000\justifyright.gif" />
+    <Content Include="App_Themes\Image\images\images\ftb\office2000\link.gif" />
+    <Content Include="App_Themes\Image\images\images\ftb\office2000\mode.design.gif" />
+    <Content Include="App_Themes\Image\images\images\ftb\office2000\mode.html.gif" />
+    <Content Include="App_Themes\Image\images\images\ftb\office2000\numberedlist.gif" />
+    <Content Include="App_Themes\Image\images\images\ftb\office2000\numbers.gif" />
+    <Content Include="App_Themes\Image\images\images\ftb\office2000\outdent.gif" />
+    <Content Include="App_Themes\Image\images\images\ftb\office2000\paste.gif" />
+    <Content Include="App_Themes\Image\images\images\ftb\office2000\print.gif" />
+    <Content Include="App_Themes\Image\images\images\ftb\office2000\redo.gif" />
+    <Content Include="App_Themes\Image\images\images\ftb\office2000\removeformat.gif" />
+    <Content Include="App_Themes\Image\images\images\ftb\office2000\save.gif" />
+    <Content Include="App_Themes\Image\images\images\ftb\office2000\separator.gif" />
+    <Content Include="App_Themes\Image\images\images\ftb\office2000\spellcheck.gif" />
+    <Content Include="App_Themes\Image\images\images\ftb\office2000\strikethrough.gif" />
+    <Content Include="App_Themes\Image\images\images\ftb\office2000\subscript.gif" />
+    <Content Include="App_Themes\Image\images\images\ftb\office2000\superscript.gif" />
+    <Content Include="App_Themes\Image\images\images\ftb\office2000\table.gif" />
+    <Content Include="App_Themes\Image\images\images\ftb\office2000\toolbar.end.gif" />
+    <Content Include="App_Themes\Image\images\images\ftb\office2000\toolbar.gif" />
+    <Content Include="App_Themes\Image\images\images\ftb\office2000\toolbar.start.gif" />
+    <Content Include="App_Themes\Image\images\images\ftb\office2000\underline.gif" />
+    <Content Include="App_Themes\Image\images\images\ftb\office2000\undo.gif" />
+    <Content Include="App_Themes\Image\images\images\ftb\office2000\unlink.gif" />
+    <Content Include="App_Themes\Image\images\images\ftb\office2000\wordclean.gif" />
+    <Content Include="App_Themes\Image\images\images\ftb\office2000\wordcount.gif" />
+    <Content Include="App_Themes\Image\images\images\ftb\office2003\bold.gif" />
+    <Content Include="App_Themes\Image\images\images\ftb\office2003\bullets.gif" />
+    <Content Include="App_Themes\Image\images\images\ftb\office2003\copy.gif" />
+    <Content Include="App_Themes\Image\images\images\ftb\office2003\createlink.gif" />
+    <Content Include="App_Themes\Image\images\images\ftb\office2003\cut.gif" />
+    <Content Include="App_Themes\Image\images\images\ftb\office2003\delete.gif" />
+    <Content Include="App_Themes\Image\images\images\ftb\office2003\deletetablecolumn.gif" />
+    <Content Include="App_Themes\Image\images\images\ftb\office2003\deletetablerow.gif" />
+    <Content Include="App_Themes\Image\images\images\ftb\office2003\fontbackcolorpicker.gif" />
+    <Content Include="App_Themes\Image\images\images\ftb\office2003\fontforecolorpicker.gif" />
+    <Content Include="App_Themes\Image\images\images\ftb\office2003\indent.gif" />
+    <Content Include="App_Themes\Image\images\images\ftb\office2003\insertdate.gif" />
+    <Content Include="App_Themes\Image\images\images\ftb\office2003\insertimage.gif" />
+    <Content Include="App_Themes\Image\images\images\ftb\office2003\insertimagefromgallery.gif" />
+    <Content Include="App_Themes\Image\images\images\ftb\office2003\insertrule.gif" />
+    <Content Include="App_Themes\Image\images\images\ftb\office2003\inserttable.gif" />
+    <Content Include="App_Themes\Image\images\images\ftb\office2003\inserttablecolumn.gif" />
+    <Content Include="App_Themes\Image\images\images\ftb\office2003\inserttablerow.gif" />
+    <Content Include="App_Themes\Image\images\images\ftb\office2003\inserttime.gif" />
+    <Content Include="App_Themes\Image\images\images\ftb\office2003\italic.gif" />
+    <Content Include="App_Themes\Image\images\images\ftb\office2003\justifycenter.gif" />
+    <Content Include="App_Themes\Image\images\images\ftb\office2003\justifyfull.gif" />
+    <Content Include="App_Themes\Image\images\images\ftb\office2003\justifyleft.gif" />
+    <Content Include="App_Themes\Image\images\images\ftb\office2003\justifyright.gif" />
+    <Content Include="App_Themes\Image\images\images\ftb\office2003\mode.design.gif" />
+    <Content Include="App_Themes\Image\images\images\ftb\office2003\mode.html.gif" />
+    <Content Include="App_Themes\Image\images\images\ftb\office2003\numberedlist.gif" />
+    <Content Include="App_Themes\Image\images\images\ftb\office2003\outdent.gif" />
+    <Content Include="App_Themes\Image\images\images\ftb\office2003\paste.gif" />
+    <Content Include="App_Themes\Image\images\images\ftb\office2003\print.gif" />
+    <Content Include="App_Themes\Image\images\images\ftb\office2003\redo.gif" />
+    <Content Include="App_Themes\Image\images\images\ftb\office2003\removeformat.gif" />
+    <Content Include="App_Themes\Image\images\images\ftb\office2003\save.gif" />
+    <Content Include="App_Themes\Image\images\images\ftb\office2003\separator.gif" />
+    <Content Include="App_Themes\Image\images\images\ftb\office2003\spellcheck.gif" />
+    <Content Include="App_Themes\Image\images\images\ftb\office2003\strikethrough.gif" />
+    <Content Include="App_Themes\Image\images\images\ftb\office2003\subscript.gif" />
+    <Content Include="App_Themes\Image\images\images\ftb\office2003\superscript.gif" />
+    <Content Include="App_Themes\Image\images\images\ftb\office2003\toolbar.background.gif" />
+    <Content Include="App_Themes\Image\images\images\ftb\office2003\toolbar.end.gif" />
+    <Content Include="App_Themes\Image\images\images\ftb\office2003\toolbar.start.gif" />
+    <Content Include="App_Themes\Image\images\images\ftb\office2003\toolbarbutton.down.gif" />
+    <Content Include="App_Themes\Image\images\images\ftb\office2003\toolbarbutton.over.gif" />
+    <Content Include="App_Themes\Image\images\images\ftb\office2003\underline.gif" />
+    <Content Include="App_Themes\Image\images\images\ftb\office2003\undo.gif" />
+    <Content Include="App_Themes\Image\images\images\ftb\office2003\unlink.gif" />
+    <Content Include="App_Themes\Image\images\images\ftb\office2003\wordclean.gif" />
+    <Content Include="App_Themes\Image\images\images\ftb\office2003\wordcount.gif" />
+    <Content Include="App_Themes\Image\images\images\ftb\officeXP\bgcolor.gif" />
+    <Content Include="App_Themes\Image\images\images\ftb\officeXP\bold.gif" />
+    <Content Include="App_Themes\Image\images\images\ftb\officeXP\bold.over.gif" />
+    <Content Include="App_Themes\Image\images\images\ftb\officeXP\borders.gif" />
+    <Content Include="App_Themes\Image\images\images\ftb\officeXP\bullets.gif" />
+    <Content Include="App_Themes\Image\images\images\ftb\officeXP\bullets.over.gif" />
+    <Content Include="App_Themes\Image\images\images\ftb\officeXP\changecase.gif" />
+    <Content Include="App_Themes\Image\images\images\ftb\officeXP\changecase.over.gif" />
+    <Content Include="App_Themes\Image\images\images\ftb\officeXP\copy.gif" />
+    <Content Include="App_Themes\Image\images\images\ftb\officeXP\copy.over.gif" />
+    <Content Include="App_Themes\Image\images\images\ftb\officeXP\createlink.gif" />
+    <Content Include="App_Themes\Image\images\images\ftb\officeXP\createlink.over.gif" />
+    <Content Include="App_Themes\Image\images\images\ftb\officeXP\cut.gif" />
+    <Content Include="App_Themes\Image\images\images\ftb\officeXP\cut.over.gif" />
+    <Content Include="App_Themes\Image\images\images\ftb\officeXP\delete.gif" />
+    <Content Include="App_Themes\Image\images\images\ftb\officeXP\delete.over.gif" />
+    <Content Include="App_Themes\Image\images\images\ftb\officeXP\deletetablecolumn.gif" />
+    <Content Include="App_Themes\Image\images\images\ftb\officeXP\deletetablecolumn.over.gif" />
+    <Content Include="App_Themes\Image\images\images\ftb\officeXP\deletetablerow.gif" />
+    <Content Include="App_Themes\Image\images\images\ftb\officeXP\deletetablerow.over.gif" />
+    <Content Include="App_Themes\Image\images\images\ftb\officeXP\details.gif" />
+    <Content Include="App_Themes\Image\images\images\ftb\officeXP\find.gif" />
+    <Content Include="App_Themes\Image\images\images\ftb\officeXP\find.over.gif" />
+    <Content Include="App_Themes\Image\images\images\ftb\officeXP\fontbackcolorpicker.gif" />
+    <Content Include="App_Themes\Image\images\images\ftb\officeXP\fontbackcolorpicker.over.gif" />
+    <Content Include="App_Themes\Image\images\images\ftb\officeXP\fontforecolorpicker.gif" />
+    <Content Include="App_Themes\Image\images\images\ftb\officeXP\fontforecolorpicker.over.gif" />
+    <Content Include="App_Themes\Image\images\images\ftb\officeXP\help.gif" />
+    <Content Include="App_Themes\Image\images\images\ftb\officeXP\help.over.gif" />
+    <Content Include="App_Themes\Image\images\images\ftb\officeXP\indent.gif" />
+    <Content Include="App_Themes\Image\images\images\ftb\officeXP\indent.over.gif" />
+    <Content Include="App_Themes\Image\images\images\ftb\officeXP\insertdate.gif" />
+    <Content Include="App_Themes\Image\images\images\ftb\officeXP\insertdate.over.gif" />
+    <Content Include="App_Themes\Image\images\images\ftb\officeXP\insertemail.gif" />
+    <Content Include="App_Themes\Image\images\images\ftb\officeXP\insertemail.over.gif" />
+    <Content Include="App_Themes\Image\images\images\ftb\officeXP\insertimage.gif" />
+    <Content Include="App_Themes\Image\images\images\ftb\officeXP\insertimage.over.gif" />
+    <Content Include="App_Themes\Image\images\images\ftb\officeXP\insertimagefromgallery.gif" />
+    <Content Include="App_Themes\Image\images\images\ftb\officeXP\insertimagefromgallery.over.gif" />
+    <Content Include="App_Themes\Image\images\images\ftb\officeXP\insertrule.gif" />
+    <Content Include="App_Themes\Image\images\images\ftb\officeXP\insertrule.over.gif" />
+    <Content Include="App_Themes\Image\images\images\ftb\officeXP\inserttable.gif" />
+    <Content Include="App_Themes\Image\images\images\ftb\officeXP\inserttable.over.gif" />
+    <Content Include="App_Themes\Image\images\images\ftb\officeXP\inserttablecolumn.gif" />
+    <Content Include="App_Themes\Image\images\images\ftb\officeXP\inserttablecolumn.over.gif" />
+    <Content Include="App_Themes\Image\images\images\ftb\officeXP\inserttablerow.gif" />
+    <Content Include="App_Themes\Image\images\images\ftb\officeXP\inserttablerow.over.gif" />
+    <Content Include="App_Themes\Image\images\images\ftb\officeXP\inserttime.gif" />
+    <Content Include="App_Themes\Image\images\images\ftb\officeXP\inserttime.over.gif" />
+    <Content Include="App_Themes\Image\images\images\ftb\officeXP\italic.gif" />
+    <Content Include="App_Themes\Image\images\images\ftb\officeXP\italic.over.gif" />
+    <Content Include="App_Themes\Image\images\images\ftb\officeXP\justifycenter.gif" />
+    <Content Include="App_Themes\Image\images\images\ftb\officeXP\justifycenter.over.gif" />
+    <Content Include="App_Themes\Image\images\images\ftb\officeXP\justifyfull.gif" />
+    <Content Include="App_Themes\Image\images\images\ftb\officeXP\justifyfull.over.gif" />
+    <Content Include="App_Themes\Image\images\images\ftb\officeXP\justifyleft.gif" />
+    <Content Include="App_Themes\Image\images\images\ftb\officeXP\justifyleft.over.gif" />
+    <Content Include="App_Themes\Image\images\images\ftb\officeXP\justifyright.gif" />
+    <Content Include="App_Themes\Image\images\images\ftb\officeXP\justifyright.over.gif" />
+    <Content Include="App_Themes\Image\images\images\ftb\officeXP\mode.design.gif" />
+    <Content Include="App_Themes\Image\images\images\ftb\officeXP\mode.html.gif" />
+    <Content Include="App_Themes\Image\images\images\ftb\officeXP\numberedlist.gif" />
+    <Content Include="App_Themes\Image\images\images\ftb\officeXP\numberedlist.over.gif" />
+    <Content Include="App_Themes\Image\images\images\ftb\officeXP\outdent.gif" />
+    <Content Include="App_Themes\Image\images\images\ftb\officeXP\outdent.over.gif" />
+    <Content Include="App_Themes\Image\images\images\ftb\officeXP\paste.gif" />
+    <Content Include="App_Themes\Image\images\images\ftb\officeXP\paste.over.gif" />
+    <Content Include="App_Themes\Image\images\images\ftb\officeXP\print.gif" />
+    <Content Include="App_Themes\Image\images\images\ftb\officeXP\print.over.gif" />
+    <Content Include="App_Themes\Image\images\images\ftb\officeXP\redo.gif" />
+    <Content Include="App_Themes\Image\images\images\ftb\officeXP\redo.over.gif" />
+    <Content Include="App_Themes\Image\images\images\ftb\officeXP\removeformat.gif" />
+    <Content Include="App_Themes\Image\images\images\ftb\officeXP\removeformat.over.gif" />
+    <Content Include="App_Themes\Image\images\images\ftb\officeXP\save.gif" />
+    <Content Include="App_Themes\Image\images\images\ftb\officeXP\save.over.gif" />
+    <Content Include="App_Themes\Image\images\images\ftb\officeXP\separator.gif" />
+    <Content Include="App_Themes\Image\images\images\ftb\officeXP\spellcheck.gif" />
+    <Content Include="App_Themes\Image\images\images\ftb\officeXP\spellcheck.over.gif" />
+    <Content Include="App_Themes\Image\images\images\ftb\officeXP\strikethrough.gif" />
+    <Content Include="App_Themes\Image\images\images\ftb\officeXP\strikethrough.over.gif" />
+    <Content Include="App_Themes\Image\images\images\ftb\officeXP\subscript.gif" />
+    <Content Include="App_Themes\Image\images\images\ftb\officeXP\subscript.over.gif" />
+    <Content Include="App_Themes\Image\images\images\ftb\officeXP\superscript.gif" />
+    <Content Include="App_Themes\Image\images\images\ftb\officeXP\superscript.over.gif" />
+    <Content Include="App_Themes\Image\images\images\ftb\officeXP\toggleborders.gif" />
+    <Content Include="App_Themes\Image\images\images\ftb\officeXP\toggledetails.gif" />
+    <Content Include="App_Themes\Image\images\images\ftb\officeXP\toggledetails.over.gif" />
+    <Content Include="App_Themes\Image\images\images\ftb\officeXP\toolbar.end.gif" />
+    <Content Include="App_Themes\Image\images\images\ftb\officeXP\toolbar.start.gif" />
+    <Content Include="App_Themes\Image\images\images\ftb\officeXP\underline.gif" />
+    <Content Include="App_Themes\Image\images\images\ftb\officeXP\underline.over.gif" />
+    <Content Include="App_Themes\Image\images\images\ftb\officeXP\undo.gif" />
+    <Content Include="App_Themes\Image\images\images\ftb\officeXP\undo.over.gif" />
+    <Content Include="App_Themes\Image\images\images\ftb\officeXP\unlink.gif" />
+    <Content Include="App_Themes\Image\images\images\ftb\officeXP\unlink.over.gif" />
+    <Content Include="App_Themes\Image\images\images\ftb\officeXP\verse.gif" />
+    <Content Include="App_Themes\Image\images\images\ftb\officeXP\verse.over.gif" />
+    <Content Include="App_Themes\Image\images\images\ftb\officeXP\wordclean.gif" />
+    <Content Include="App_Themes\Image\images\images\ftb\officeXP\wordclean.over.gif" />
+    <Content Include="App_Themes\Image\images\images\ftb\officeXP\wordcount.gif" />
+    <Content Include="App_Themes\Image\images\images\ftb\officeXP\wordcount.over.gif" />
+    <Content Include="App_Themes\Image\images\log.ico" />
+    <Content Include="App_Themes\Image\images\s_02_hover.png" />
+    <Content Include="App_Themes\Image\log.bmp" />
+    <Content Include="App_Themes\Image\navbg.gif" />
+    <Content Include="App_Themes\Image\navbg_a.gif" />
+    <Content Include="App_Themes\Image\nav_xian.gif" />
+    <Content Include="App_Themes\Image\shortArticle.png" />
+    <Content Include="App_Themes\js\addDel.js" />
+    <Content Include="App_Themes\js\ajax-loader.gif" />
+    <Content Include="App_Themes\js\jquery-1.7.2.min.js" />
+    <Content Include="App_Themes\js\jquery-1.9.1.min.js" />
+    <Content Include="App_Themes\js\main.js" />
+    <Content Include="App_Themes\layer-v1.9.3\layer\extend\layer.ext.js" />
+    <Content Include="App_Themes\layer-v1.9.3\layer\layer.js" />
+    <Content Include="App_Themes\layer-v1.9.3\layer\skin\default\icon-ext.png" />
+    <Content Include="App_Themes\layer-v1.9.3\layer\skin\default\icon.png" />
+    <Content Include="App_Themes\layer-v1.9.3\layer\skin\default\loading-0.gif" />
+    <Content Include="App_Themes\layer-v1.9.3\layer\skin\default\loading-1.gif" />
+    <Content Include="App_Themes\layer-v1.9.3\layer\skin\default\loading-2.gif" />
+    <Content Include="App_Themes\layer-v1.9.3\layer\skin\layer.css" />
+    <Content Include="App_Themes\layer-v1.9.3\layer\skin\layer.ext.css" />
+    <Content Include="App_Themes\StyleSheet.css" />
+    <Content Include="shar\MyShortArticle.aspx" />
+    <Content Include="shar\ShortArticle.aspx" />
+    <Content Include="Test.aspx" />
+    <Content Include="UCControl\Advertisement.ascx" />
+    <Content Include="UCControl\Footer.ascx" />
+    <Content Include="UCControl\js\jquery.min.js" />
+    <Content Include="UCControl\js\main.js" />
+    <Content Include="UCControl\LogLB.ascx" />
+    <Content Include="UCControl\NavigationMenu.ascx" />
+    <Content Include="UCControl\SharHeader.ascx" />
+    <Content Include="ueditor\asp\config.asp" />
+    <Content Include="ueditor\asp\fileUp.asp" />
+    <Content Include="ueditor\asp\getContent.asp" />
+    <Content Include="ueditor\asp\getMovie.asp" />
+    <Content Include="ueditor\asp\getRemoteImage.asp" />
+    <Content Include="ueditor\asp\imageManager.asp" />
+    <Content Include="ueditor\asp\imageUp.asp" />
+    <Content Include="ueditor\asp\json.asp" />
+    <Content Include="ueditor\asp\scrawlUp.asp" />
+    <Content Include="ueditor\asp\Uploader.Class.asp" />
+    <Content Include="ueditor\dialogs\anchor\anchor.html" />
+    <Content Include="ueditor\dialogs\attachment\attachment.css" />
+    <Content Include="ueditor\dialogs\attachment\attachment.html" />
+    <Content Include="ueditor\dialogs\attachment\callbacks.js" />
+    <Content Include="ueditor\dialogs\attachment\fileTypeImages\icon_chm.gif" />
+    <Content Include="ueditor\dialogs\attachment\fileTypeImages\icon_default.png" />
+    <Content Include="ueditor\dialogs\attachment\fileTypeImages\icon_doc.gif" />
+    <Content Include="ueditor\dialogs\attachment\fileTypeImages\icon_exe.gif" />
+    <Content Include="ueditor\dialogs\attachment\fileTypeImages\icon_mp3.gif" />
+    <Content Include="ueditor\dialogs\attachment\fileTypeImages\icon_mv.gif" />
+    <Content Include="ueditor\dialogs\attachment\fileTypeImages\icon_pdf.gif" />
+    <Content Include="ueditor\dialogs\attachment\fileTypeImages\icon_ppt.gif" />
+    <Content Include="ueditor\dialogs\attachment\fileTypeImages\icon_psd.gif" />
+    <Content Include="ueditor\dialogs\attachment\fileTypeImages\icon_rar.gif" />
+    <Content Include="ueditor\dialogs\attachment\fileTypeImages\icon_txt.gif" />
+    <Content Include="ueditor\dialogs\attachment\fileTypeImages\icon_xls.gif" />
+    <Content Include="ueditor\dialogs\attachment\fileTypeMaps.js" />
+    <Content Include="ueditor\dialogs\background\background.css" />
+    <Content Include="ueditor\dialogs\background\background.html" />
+    <Content Include="ueditor\dialogs\background\background.js" />
+    <Content Include="ueditor\dialogs\charts\chart.config.js" />
+    <Content Include="ueditor\dialogs\charts\charts.css" />
+    <Content Include="ueditor\dialogs\charts\charts.html" />
+    <Content Include="ueditor\dialogs\charts\charts.js" />
+    <Content Include="ueditor\dialogs\charts\images\charts0.png" />
+    <Content Include="ueditor\dialogs\charts\images\charts1.png" />
+    <Content Include="ueditor\dialogs\charts\images\charts2.png" />
+    <Content Include="ueditor\dialogs\charts\images\charts3.png" />
+    <Content Include="ueditor\dialogs\charts\images\charts4.png" />
+    <Content Include="ueditor\dialogs\charts\images\charts5.png" />
+    <Content Include="ueditor\dialogs\emotion\emotion.css" />
+    <Content Include="ueditor\dialogs\emotion\emotion.html" />
+    <Content Include="ueditor\dialogs\emotion\emotion.js" />
+    <Content Include="ueditor\dialogs\emotion\images\0.gif" />
+    <Content Include="ueditor\dialogs\emotion\images\bface.gif" />
+    <Content Include="ueditor\dialogs\emotion\images\cface.gif" />
+    <Content Include="ueditor\dialogs\emotion\images\fface.gif" />
+    <Content Include="ueditor\dialogs\emotion\images\jxface2.gif" />
+    <Content Include="ueditor\dialogs\emotion\images\neweditor-tab-bg.png" />
+    <Content Include="ueditor\dialogs\emotion\images\tface.gif" />
+    <Content Include="ueditor\dialogs\emotion\images\wface.gif" />
+    <Content Include="ueditor\dialogs\emotion\images\yface.gif" />
+    <Content Include="ueditor\dialogs\gmap\gmap.html" />
+    <Content Include="ueditor\dialogs\help\help.css" />
+    <Content Include="ueditor\dialogs\help\help.html" />
+    <Content Include="ueditor\dialogs\help\help.js" />
+    <Content Include="ueditor\dialogs\image\image.css" />
+    <Content Include="ueditor\dialogs\image\image.html" />
+    <Content Include="ueditor\dialogs\image\image.js" />
+    <Content Include="ueditor\dialogs\image\image11.html" />
+    <Content Include="ueditor\dialogs\image\images\center_focus.jpg" />
+    <Content Include="ueditor\dialogs\image\images\left_focus.jpg" />
+    <Content Include="ueditor\dialogs\image\images\none_focus.jpg" />
+    <Content Include="ueditor\dialogs\image\images\right_focus.jpg" />
+    <Content Include="ueditor\dialogs\image\imageUploader.swf" />
+    <Content Include="ueditor\dialogs\insertframe\insertframe.html" />
+    <Content Include="ueditor\dialogs\internal.js" />
+    <Content Include="ueditor\dialogs\link\link.html" />
+    <Content Include="ueditor\dialogs\map\map.html" />
+    <Content Include="ueditor\dialogs\map\show.html" />
+    <Content Include="ueditor\dialogs\music\music.css" />
+    <Content Include="ueditor\dialogs\music\music.html" />
+    <Content Include="ueditor\dialogs\music\music.js" />
+    <Content Include="ueditor\dialogs\preview\preview.html" />
+    <Content Include="ueditor\dialogs\scrawl\images\addimg.png" />
+    <Content Include="ueditor\dialogs\scrawl\images\brush.png" />
+    <Content Include="ueditor\dialogs\scrawl\images\delimg.png" />
+    <Content Include="ueditor\dialogs\scrawl\images\delimgH.png" />
+    <Content Include="ueditor\dialogs\scrawl\images\empty.png" />
+    <Content Include="ueditor\dialogs\scrawl\images\emptyH.png" />
+    <Content Include="ueditor\dialogs\scrawl\images\eraser.png" />
+    <Content Include="ueditor\dialogs\scrawl\images\redo.png" />
+    <Content Include="ueditor\dialogs\scrawl\images\redoH.png" />
+    <Content Include="ueditor\dialogs\scrawl\images\scale.png" />
+    <Content Include="ueditor\dialogs\scrawl\images\scaleH.png" />
+    <Content Include="ueditor\dialogs\scrawl\images\size.png" />
+    <Content Include="ueditor\dialogs\scrawl\images\undo.png" />
+    <Content Include="ueditor\dialogs\scrawl\images\undoH.png" />
+    <Content Include="ueditor\dialogs\scrawl\scrawl.css" />
+    <Content Include="ueditor\dialogs\scrawl\scrawl.html" />
+    <Content Include="ueditor\dialogs\scrawl\scrawl.js" />
+    <Content Include="ueditor\dialogs\searchreplace\searchreplace.html" />
+    <Content Include="ueditor\dialogs\searchreplace\searchreplace.js" />
+    <Content Include="ueditor\dialogs\snapscreen\snapscreen.html" />
+    <Content Include="ueditor\dialogs\spechars\spechars.html" />
+    <Content Include="ueditor\dialogs\spechars\spechars.js" />
+    <Content Include="ueditor\dialogs\table\dragicon.png" />
+    <Content Include="ueditor\dialogs\table\edittable.css" />
+    <Content Include="ueditor\dialogs\table\edittable.html" />
+    <Content Include="ueditor\dialogs\table\edittable.js" />
+    <Content Include="ueditor\dialogs\table\edittd.html" />
+    <Content Include="ueditor\dialogs\table\edittip.html" />
+    <Content Include="ueditor\dialogs\tangram.js" />
+    <Content Include="ueditor\dialogs\template\config.js" />
+    <Content Include="ueditor\dialogs\template\images\bg.gif" />
+    <Content Include="ueditor\dialogs\template\images\pre0.png" />
+    <Content Include="ueditor\dialogs\template\images\pre1.png" />
+    <Content Include="ueditor\dialogs\template\images\pre2.png" />
+    <Content Include="ueditor\dialogs\template\images\pre3.png" />
+    <Content Include="ueditor\dialogs\template\images\pre4.png" />
+    <Content Include="ueditor\dialogs\template\template.css" />
+    <Content Include="ueditor\dialogs\template\template.html" />
+    <Content Include="ueditor\dialogs\template\template.js" />
+    <Content Include="ueditor\dialogs\video\callbacks.js" />
+    <Content Include="ueditor\dialogs\video\images\center_focus.jpg" />
+    <Content Include="ueditor\dialogs\video\images\left_focus.jpg" />
+    <Content Include="ueditor\dialogs\video\images\none_focus.jpg" />
+    <Content Include="ueditor\dialogs\video\images\right_focus.jpg" />
+    <Content Include="ueditor\dialogs\video\video.css" />
+    <Content Include="ueditor\dialogs\video\video.html" />
+    <Content Include="ueditor\dialogs\video\video.js" />
+    <Content Include="ueditor\dialogs\webapp\webapp.html" />
+    <Content Include="ueditor\dialogs\wordimage\fClipboard_ueditor.swf" />
+    <Content Include="ueditor\dialogs\wordimage\imageUploader.swf" />
+    <Content Include="ueditor\dialogs\wordimage\wordimage.html" />
+    <Content Include="ueditor\dialogs\wordimage\wordimage.js" />
+    <Content Include="ueditor\Gruntfile.js" />
+    <Content Include="ueditor\jsp\commons-fileupload-1.2.2.jar" />
+    <Content Include="ueditor\jsp\ueditor.jar" />
+    <Content Include="ueditor\jsp\Uploader.java" />
+    <Content Include="ueditor\lang\en\en.js" />
+    <Content Include="ueditor\lang\en\images\addimage.png" />
+    <Content Include="ueditor\lang\en\images\alldeletebtnhoverskin.png" />
+    <Content Include="ueditor\lang\en\images\alldeletebtnupskin.png" />
+    <Content Include="ueditor\lang\en\images\background.png" />
+    <Content Include="ueditor\lang\en\images\button.png" />
+    <Content Include="ueditor\lang\en\images\copy.png" />
+    <Content Include="ueditor\lang\en\images\deletedisable.png" />
+    <Content Include="ueditor\lang\en\images\deleteenable.png" />
+    <Content Include="ueditor\lang\en\images\imglabel.png" />
+    <Content Include="ueditor\lang\en\images\listbackground.png" />
+    <Content Include="ueditor\lang\en\images\localimage.png" />
+    <Content Include="ueditor\lang\en\images\music.png" />
+    <Content Include="ueditor\lang\en\images\rotateleftdisable.png" />
+    <Content Include="ueditor\lang\en\images\rotateleftenable.png" />
+    <Content Include="ueditor\lang\en\images\rotaterightdisable.png" />
+    <Content Include="ueditor\lang\en\images\rotaterightenable.png" />
+    <Content Include="ueditor\lang\en\images\upload.png" />
+    <Content Include="ueditor\lang\zh-cn\images\copy.png" />
+    <Content Include="ueditor\lang\zh-cn\images\imglabel.png" />
+    <Content Include="ueditor\lang\zh-cn\images\localimage.png" />
+    <Content Include="ueditor\lang\zh-cn\images\music.png" />
+    <Content Include="ueditor\lang\zh-cn\images\upload.png" />
+    <Content Include="ueditor\lang\zh-cn\zh-cn.js" />
+    <Content Include="ueditor\net\ueditorFile\imgFile\2015-11-23\0927fbfc-b788-4b46-94b3-1611b4da92f3.png" />
+    <Content Include="ueditor\net\ueditorFile\imgFile\2015-11-23\51db0a6e-6232-4f19-8f68-685d60a1c2cb.png" />
+    <Content Include="ueditor\net\ueditorFile\imgFile\2015-11-23\a255e93e-04d6-443b-ba2a-6be0cedd57bf.png" />
+    <Content Include="ueditor\net\ueditorFile\imgFile\2015-11-23\aacc4b2a-cc93-4b9a-8370-c074863a563e.gif" />
+    <Content Include="ueditor\net\ueditorFile\imgFile\2015-11-23\dcea860d-91a5-4724-bcd8-ce4c35fb29b6.png" />
+    <Content Include="ueditor\net\upload\2013-10-23\7d42460b-6dac-4cb1-8c45-5b95ef891a00.jpg" />
+    <Content Include="ueditor\net\upload\2013-10-23\e91c5aa3-b18c-428b-81bc-39a1f57bdcdc.jpg" />
+    <Content Include="ueditor\themes\default\css\ueditor.css" />
+    <Content Include="ueditor\themes\default\dialogbase.css" />
+    <Content Include="ueditor\themes\default\images\anchor.gif" />
+    <Content Include="ueditor\themes\default\images\arrow.png" />
+    <Content Include="ueditor\themes\default\images\arrow_down.png" />
+    <Content Include="ueditor\themes\default\images\arrow_up.png" />
+    <Content Include="ueditor\themes\default\images\button-bg.gif" />
+    <Content Include="ueditor\themes\default\images\cancelbutton.gif" />
+    <Content Include="ueditor\themes\default\images\charts.png" />
+    <Content Include="ueditor\themes\default\images\cursor_h.gif" />
+    <Content Include="ueditor\themes\default\images\cursor_h.png" />
+    <Content Include="ueditor\themes\default\images\cursor_v.gif" />
+    <Content Include="ueditor\themes\default\images\cursor_v.png" />
+    <Content Include="ueditor\themes\default\images\dialog-title-bg.png" />
+    <Content Include="ueditor\themes\default\images\filescan.png" />
+    <Content Include="ueditor\themes\default\images\highlighted.gif" />
+    <Content Include="ueditor\themes\default\images\icons-all.gif" />
+    <Content Include="ueditor\themes\default\images\icons.gif" />
+    <Content Include="ueditor\themes\default\images\icons.png" />
+    <Content Include="ueditor\themes\default\images\lock.gif" />
+    <Content Include="ueditor\themes\default\images\neweditor-tab-bg.png" />
+    <Content Include="ueditor\themes\default\images\pagebreak.gif" />
+    <Content Include="ueditor\themes\default\images\scale.png" />
+    <Content Include="ueditor\themes\default\images\sortable.png" />
+    <Content Include="ueditor\themes\default\images\spacer.gif" />
+    <Content Include="ueditor\themes\default\images\sparator_v.png" />
+    <Content Include="ueditor\themes\default\images\table-cell-align.png" />
+    <Content Include="ueditor\themes\default\images\tangram-colorpicker.png" />
+    <Content Include="ueditor\themes\default\images\toolbar_bg.png" />
+    <Content Include="ueditor\themes\default\images\unhighlighted.gif" />
+    <Content Include="ueditor\themes\default\images\upload.png" />
+    <Content Include="ueditor\themes\default\images\videologo.gif" />
+    <Content Include="ueditor\themes\default\images\word.gif" />
+    <Content Include="ueditor\themes\default\images\wordpaste.png" />
+    <Content Include="ueditor\themes\default\_css\autotypesetpicker.css" />
+    <Content Include="ueditor\themes\default\_css\button.css" />
+    <Content Include="ueditor\themes\default\_css\buttonicon.css" />
+    <Content Include="ueditor\themes\default\_css\cellalignpicker.css" />
+    <Content Include="ueditor\themes\default\_css\colorbutton.css" />
+    <Content Include="ueditor\themes\default\_css\colorpicker.css" />
+    <Content Include="ueditor\themes\default\_css\combox.css" />
+    <Content Include="ueditor\themes\default\_css\contextmenu.css" />
+    <Content Include="ueditor\themes\default\_css\dialog.css" />
+    <Content Include="ueditor\themes\default\_css\editor.css" />
+    <Content Include="ueditor\themes\default\_css\menu.css" />
+    <Content Include="ueditor\themes\default\_css\menubutton.css" />
+    <Content Include="ueditor\themes\default\_css\multiMenu.css" />
+    <Content Include="ueditor\themes\default\_css\paragraphpicker.css" />
+    <Content Include="ueditor\themes\default\_css\pastepicker.css" />
+    <Content Include="ueditor\themes\default\_css\popup.css" />
+    <Content Include="ueditor\themes\default\_css\separtor.css" />
+    <Content Include="ueditor\themes\default\_css\shortcutmenu.css" />
+    <Content Include="ueditor\themes\default\_css\splitbutton.css" />
+    <Content Include="ueditor\themes\default\_css\tablepicker.css" />
+    <Content Include="ueditor\themes\default\_css\toolbar.css" />
+    <Content Include="ueditor\themes\default\_css\ueditor.css" />
+    <Content Include="ueditor\themes\default\_css\uibase.css" />
+    <Content Include="ueditor\themes\iframe.css" />
+    <Content Include="ueditor\third-party\codemirror\codemirror.css" />
+    <Content Include="ueditor\third-party\codemirror\codemirror.js" />
+    <Content Include="ueditor\third-party\highcharts\adapters\mootools-adapter.js" />
+    <Content Include="ueditor\third-party\highcharts\adapters\mootools-adapter.src.js" />
+    <Content Include="ueditor\third-party\highcharts\adapters\prototype-adapter.js" />
+    <Content Include="ueditor\third-party\highcharts\adapters\prototype-adapter.src.js" />
+    <Content Include="ueditor\third-party\highcharts\adapters\standalone-framework.js" />
+    <Content Include="ueditor\third-party\highcharts\adapters\standalone-framework.src.js" />
+    <Content Include="ueditor\third-party\highcharts\highcharts-more.js" />
+    <Content Include="ueditor\third-party\highcharts\highcharts-more.src.js" />
+    <Content Include="ueditor\third-party\highcharts\highcharts.js" />
+    <Content Include="ueditor\third-party\highcharts\highcharts.src.js" />
+    <Content Include="ueditor\third-party\highcharts\modules\annotations.js" />
+    <Content Include="ueditor\third-party\highcharts\modules\annotations.src.js" />
+    <Content Include="ueditor\third-party\highcharts\modules\canvas-tools.js" />
+    <Content Include="ueditor\third-party\highcharts\modules\canvas-tools.src.js" />
+    <Content Include="ueditor\third-party\highcharts\modules\data.js" />
+    <Content Include="ueditor\third-party\highcharts\modules\data.src.js" />
+    <Content Include="ueditor\third-party\highcharts\modules\drilldown.js" />
+    <Content Include="ueditor\third-party\highcharts\modules\drilldown.src.js" />
+    <Content Include="ueditor\third-party\highcharts\modules\exporting.js" />
+    <Content Include="ueditor\third-party\highcharts\modules\exporting.src.js" />
+    <Content Include="ueditor\third-party\highcharts\modules\funnel.js" />
+    <Content Include="ueditor\third-party\highcharts\modules\funnel.src.js" />
+    <Content Include="ueditor\third-party\highcharts\modules\heatmap.js" />
+    <Content Include="ueditor\third-party\highcharts\modules\heatmap.src.js" />
+    <Content Include="ueditor\third-party\highcharts\modules\map.js" />
+    <Content Include="ueditor\third-party\highcharts\modules\map.src.js" />
+    <Content Include="ueditor\third-party\highcharts\modules\no-data-to-display.js" />
+    <Content Include="ueditor\third-party\highcharts\modules\no-data-to-display.src.js" />
+    <Content Include="ueditor\third-party\highcharts\themes\dark-blue.js" />
+    <Content Include="ueditor\third-party\highcharts\themes\dark-green.js" />
+    <Content Include="ueditor\third-party\highcharts\themes\gray.js" />
+    <Content Include="ueditor\third-party\highcharts\themes\grid.js" />
+    <Content Include="ueditor\third-party\highcharts\themes\skies.js" />
+    <Content Include="ueditor\third-party\jquery-1.10.2.min.js" />
+    <Content Include="ueditor\third-party\snapscreen\UEditorSnapscreen.exe" />
+    <Content Include="ueditor\third-party\swfupload\fileprogress.js" />
+    <Content Include="ueditor\third-party\swfupload\swfupload.cookies.js" />
+    <Content Include="ueditor\third-party\swfupload\swfupload.js" />
+    <Content Include="ueditor\third-party\swfupload\swfupload.proxy.js" />
+    <Content Include="ueditor\third-party\swfupload\swfupload.queue.js" />
+    <Content Include="ueditor\third-party\swfupload\swfupload.speed.js" />
+    <Content Include="ueditor\third-party\swfupload\swfupload.swf" />
+    <Content Include="ueditor\third-party\swfupload\swfupload_fp9.swf" />
+    <Content Include="ueditor\third-party\SyntaxHighlighter\shCore.js" />
+    <Content Include="ueditor\third-party\SyntaxHighlighter\shCoreDefault.css" />
+    <Content Include="ueditor\third-party\video-js\font\vjs.svg" />
+    <Content Include="ueditor\third-party\video-js\video-js.css" />
+    <Content Include="ueditor\third-party\video-js\video-js.min.css" />
+    <Content Include="ueditor\third-party\video-js\video-js.swf" />
+    <Content Include="ueditor\third-party\video-js\video.dev.js" />
+    <Content Include="ueditor\third-party\video-js\video.js" />
+    <Content Include="ueditor\ueditor.all.js" />
+    <Content Include="ueditor\ueditor.all.min.js" />
+    <Content Include="ueditor\ueditor.config.js" />
+    <Content Include="ueditor\ueditor.parse.js" />
+    <Content Include="ueditor\_examples\charts.html" />
+    <Content Include="ueditor\_examples\completeDemo.html" />
+    <Content Include="ueditor\_examples\customPluginDemo.html" />
+    <Content Include="ueditor\_examples\customToolbarDemo.html" />
+    <Content Include="ueditor\_examples\editor_api.js" />
+    <Content Include="ueditor\_examples\filterRuleDemo.html" />
+    <Content Include="ueditor\_examples\highlightDemo.html" />
+    <Content Include="ueditor\_examples\index.html" />
+    <Content Include="ueditor\_examples\jqueryCompleteDemo.html" />
+    <Content Include="ueditor\_examples\jqueryValidation.html" />
+    <Content Include="ueditor\_examples\multiDemo.html" />
+    <Content Include="ueditor\_examples\multiEditorWithOneInstance.html" />
+    <Content Include="ueditor\_examples\renderInTable.html" />
+    <Content Include="ueditor\_examples\resetDemo.html" />
+    <Content Include="ueditor\_examples\sectiondemo.html" />
+    <Content Include="ueditor\_examples\setWidthHeightDemo.html" />
+    <Content Include="ueditor\_examples\simpleDemo.html" />
+    <Content Include="ueditor\_examples\sortableDemo.html" />
+    <Content Include="ueditor\_examples\submitFormDemo.html" />
+    <Content Include="ueditor\_examples\textareaDemo.html" />
+    <Content Include="ueditor\_examples\uparsedemo.html" />
+    <Content Include="ueditor\_parse\background.js" />
+    <Content Include="ueditor\_parse\charts.js" />
+    <Content Include="ueditor\_parse\insertcode.js" />
+    <Content Include="ueditor\_parse\list.js" />
+    <Content Include="ueditor\_parse\parse.js" />
+    <Content Include="ueditor\_parse\table.js" />
+    <Content Include="ueditor\_parse\video.js" />
+    <Content Include="ueditor\_src\api.js" />
+    <Content Include="ueditor\_src\core\ajax.js" />
+    <Content Include="ueditor\_src\core\browser.js" />
+    <Content Include="ueditor\_src\core\domUtils.js" />
+    <Content Include="ueditor\_src\core\dtd.js" />
+    <Content Include="ueditor\_src\core\Editor.js" />
+    <Content Include="ueditor\_src\core\EventBase.js" />
+    <Content Include="ueditor\_src\core\filternode.js" />
+    <Content Include="ueditor\_src\core\filterword.js" />
+    <Content Include="ueditor\_src\core\htmlparser.js" />
+    <Content Include="ueditor\_src\core\node.js" />
+    <Content Include="ueditor\_src\core\plugin.js" />
+    <Content Include="ueditor\_src\core\Range.js" />
+    <Content Include="ueditor\_src\core\Selection.js" />
+    <Content Include="ueditor\_src\core\utils.js" />
+    <Content Include="ueditor\_src\editor.js" />
+    <Content Include="ueditor\_src\plugins\anchor.js" />
+    <Content Include="ueditor\_src\plugins\autofloat.js" />
+    <Content Include="ueditor\_src\plugins\autoheight.js" />
+    <Content Include="ueditor\_src\plugins\autolink.js" />
+    <Content Include="ueditor\_src\plugins\autosave.js" />
+    <Content Include="ueditor\_src\plugins\autosubmit.js" />
+    <Content Include="ueditor\_src\plugins\autotypeset.js" />
+    <Content Include="ueditor\_src\plugins\autoupload.js" />
+    <Content Include="ueditor\_src\plugins\background.js" />
+    <Content Include="ueditor\_src\plugins\basestyle.js" />
+    <Content Include="ueditor\_src\plugins\blockquote.js" />
+    <Content Include="ueditor\_src\plugins\catchremoteimage.js" />
+    <Content Include="ueditor\_src\plugins\charts.js" />
+    <Content Include="ueditor\_src\plugins\cleardoc.js" />
+    <Content Include="ueditor\_src\plugins\contextmenu.js" />
+    <Content Include="ueditor\_src\plugins\convertcase.js" />
+    <Content Include="ueditor\_src\plugins\customstyle.js" />
+    <Content Include="ueditor\_src\plugins\defaultfilter.js" />
+    <Content Include="ueditor\_src\plugins\directionality.js" />
+    <Content Include="ueditor\_src\plugins\dragdrop.js" />
+    <Content Include="ueditor\_src\plugins\elementpath.js" />
+    <Content Include="ueditor\_src\plugins\enterkey.js" />
+    <Content Include="ueditor\_src\plugins\fiximgclick.js" />
+    <Content Include="ueditor\_src\plugins\font.js" />
+    <Content Include="ueditor\_src\plugins\formatmatch.js" />
+    <Content Include="ueditor\_src\plugins\horizontal.js" />
+    <Content Include="ueditor\_src\plugins\iframe.js" />
+    <Content Include="ueditor\_src\plugins\image.js" />
+    <Content Include="ueditor\_src\plugins\indent.js" />
+    <Content Include="ueditor\_src\plugins\insertcode.js" />
+    <Content Include="ueditor\_src\plugins\inserthtml.js" />
+    <Content Include="ueditor\_src\plugins\insertparagraph.js" />
+    <Content Include="ueditor\_src\plugins\justify.js" />
+    <Content Include="ueditor\_src\plugins\keystrokes.js" />
+    <Content Include="ueditor\_src\plugins\lineheight.js" />
+    <Content Include="ueditor\_src\plugins\link.js" />
+    <Content Include="ueditor\_src\plugins\list.js" />
+    <Content Include="ueditor\_src\plugins\music.js" />
+    <Content Include="ueditor\_src\plugins\pagebreak.js" />
+    <Content Include="ueditor\_src\plugins\paragraph.js" />
+    <Content Include="ueditor\_src\plugins\paste.js" />
+    <Content Include="ueditor\_src\plugins\print.js" />
+    <Content Include="ueditor\_src\plugins\puretxtpaste.js" />
+    <Content Include="ueditor\_src\plugins\removeformat.js" />
+    <Content Include="ueditor\_src\plugins\rowspacing.js" />
+    <Content Include="ueditor\_src\plugins\scrawl.js" />
+    <Content Include="ueditor\_src\plugins\searchreplace.js" />
+    <Content Include="ueditor\_src\plugins\section.js" />
+    <Content Include="ueditor\_src\plugins\selectall.js" />
+    <Content Include="ueditor\_src\plugins\shortcutmenu.js" />
+    <Content Include="ueditor\_src\plugins\snapscreen.js" />
+    <Content Include="ueditor\_src\plugins\source.js" />
+    <Content Include="ueditor\_src\plugins\table.action.js" />
+    <Content Include="ueditor\_src\plugins\table.cmds.js" />
+    <Content Include="ueditor\_src\plugins\table.core.js" />
+    <Content Include="ueditor\_src\plugins\table.sort.js" />
+    <Content Include="ueditor\_src\plugins\template.js" />
+    <Content Include="ueditor\_src\plugins\time.js" />
+    <Content Include="ueditor\_src\plugins\undo.js" />
+    <Content Include="ueditor\_src\plugins\video.js" />
+    <Content Include="ueditor\_src\plugins\webapp.js" />
+    <Content Include="ueditor\_src\plugins\wordcount.js" />
+    <Content Include="ueditor\_src\plugins\wordimage.js" />
+    <Content Include="ueditor\_src\ui\autotypesetbutton.js" />
+    <Content Include="ueditor\_src\ui\autotypesetpicker.js" />
+    <Content Include="ueditor\_src\ui\breakline.js" />
+    <Content Include="ueditor\_src\ui\button.js" />
+    <Content Include="ueditor\_src\ui\cellalignpicker.js" />
+    <Content Include="ueditor\_src\ui\colorbutton.js" />
+    <Content Include="ueditor\_src\ui\colorpicker.js" />
+    <Content Include="ueditor\_src\ui\combox.js" />
+    <Content Include="ueditor\_src\ui\dialog.js" />
+    <Content Include="ueditor\_src\ui\editor.js" />
+    <Content Include="ueditor\_src\ui\editorui.js" />
+    <Content Include="ueditor\_src\ui\mask.js" />
+    <Content Include="ueditor\_src\ui\menu.js" />
+    <Content Include="ueditor\_src\ui\menubutton.js" />
+    <Content Include="ueditor\_src\ui\multiMenu.js" />
+    <Content Include="ueditor\_src\ui\pastepicker.js" />
+    <Content Include="ueditor\_src\ui\popup.js" />
+    <Content Include="ueditor\_src\ui\separator.js" />
+    <Content Include="ueditor\_src\ui\shortcutmenu.js" />
+    <Content Include="ueditor\_src\ui\splitbutton.js" />
+    <Content Include="ueditor\_src\ui\stateful.js" />
+    <Content Include="ueditor\_src\ui\tablebutton.js" />
+    <Content Include="ueditor\_src\ui\tablepicker.js" />
+    <Content Include="ueditor\_src\ui\toolbar.js" />
+    <Content Include="ueditor\_src\ui\ui.js" />
+    <Content Include="ueditor\_src\ui\uibase.js" />
+    <Content Include="ueditor\_src\ui\uiutils.js" />
+    <Content Include="ueditor\使用说明.txt" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\Combres.cs" />
+    <Compile Include="Config\MyHandler.cs" />
+    <Compile Include="DAL\DataClass.cs" />
+    <Compile Include="DAL\DataTableToListModel.cs" />
+    <Compile Include="DAL\enumClass.cs" />
+    <Compile Include="DAL\ExpansionClass.cs" />
+    <Compile Include="DAL\MyHttpClient.cs" />
+    <Compile Include="Error.aspx.cs">
+      <DependentUpon>Error.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Error.aspx.designer.cs">
+      <DependentUpon>Error.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Home.aspx.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Home.aspx.designer.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="job\HttpHandlerBase.cs" />
+    <Compile Include="job\job.aspx.cs">
+      <DependentUpon>job.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="job\job.aspx.designer.cs">
+      <DependentUpon>job.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="job\zhaopinPrcoess.ashx.cs">
+      <DependentUpon>zhaopinPrcoess.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="linkAdd.aspx.cs">
+      <DependentUpon>linkAdd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="linkAdd.aspx.designer.cs">
+      <DependentUpon>linkAdd.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="log4net1\LogHelper.cs" />
+    <Compile Include="MaterPage\BasePage.Master.cs">
+      <DependentUpon>BasePage.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MaterPage\BasePage.Master.designer.cs">
+      <DependentUpon>BasePage.Master</DependentUpon>
+    </Compile>
+    <Compile Include="MaterPage\MaterPage.master.cs">
+      <DependentUpon>MaterPage.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MaterPage\MaterPage.master.designer.cs">
+      <DependentUpon>MaterPage.master</DependentUpon>
+    </Compile>
+    <Compile Include="Model\CheckIP.cs" />
+    <Compile Include="Model\IpDetail.cs" />
+    <Compile Include="Model\IpHelper.cs" />
+    <Compile Include="Model\Meta.cs" />
+    <Compile Include="Model\Meues.cs" />
+    <Compile Include="Model\QQOAuth.cs" />
+    <Compile Include="Model\Tool.cs" />
+    <Compile Include="Model\ZhaopinInfo.cs" />
+    <Compile Include="MoreDatailed.aspx.cs">
+      <DependentUpon>MoreDatailed.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MoreDatailed.aspx.designer.cs">
+      <DependentUpon>MoreDatailed.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="oauth\GetRightQQTonken.aspx.cs">
+      <DependentUpon>GetRightQQTonken.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="oauth\GetRightQQTonken.aspx.designer.cs">
+      <DependentUpon>GetRightQQTonken.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="oauth\QQlogin.aspx.cs">
+      <DependentUpon>QQlogin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ReleaseEditors.aspx.cs">
+      <DependentUpon>ReleaseEditors.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ReleaseEditors.aspx.designer.cs">
+      <DependentUpon>ReleaseEditors.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="shar\AjaxFavorite.ashx.cs">
+      <DependentUpon>AjaxFavorite.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="shar\AjaxLike.ashx.cs">
+      <DependentUpon>AjaxLike.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\CommconHelper.cs" />
+    <Compile Include="DAL\CustomerService.cs" />
+    <Compile Include="DAL\DBHelper.cs" />
+    <Compile Include="DAL\ShortArticleService.cs" />
+    <Compile Include="shar\ChangePassword.aspx.cs">
+      <DependentUpon>ChangePassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="shar\ChangePassword.aspx.designer.cs">
+      <DependentUpon>ChangePassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="shar\DeleteShortArticle.aspx.cs">
+      <DependentUpon>DeleteShortArticle.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="shar\DeleteShortArticle.aspx.designer.cs">
+      <DependentUpon>DeleteShortArticle.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="shar\Exit.aspx.cs">
+      <DependentUpon>Exit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="shar\Exit.aspx.designer.cs">
+      <DependentUpon>Exit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Model\ArticleCommentModel.cs" />
+    <Compile Include="Model\ArticleLikeModel.cs" />
+    <Compile Include="Model\CustomerModel.cs" />
+    <Compile Include="Model\FavoriteModel.cs" />
+    <Compile Include="Model\ShortArticleModel.cs" />
+    <Compile Include="shar\Index.aspx.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="shar\Index.aspx.designer.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Register.aspx.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Register.aspx.designer.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="shar\MyShortArticle.aspx.cs">
+      <DependentUpon>MyShortArticle.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="shar\MyShortArticle.aspx.designer.cs">
+      <DependentUpon>MyShortArticle.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="shar\ShortArticle.aspx.cs">
+      <DependentUpon>ShortArticle.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="shar\ShortArticle.aspx.designer.cs">
+      <DependentUpon>ShortArticle.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Test.aspx.cs">
+      <DependentUpon>Test.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Test.aspx.designer.cs">
+      <DependentUpon>Test.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UCControl\Advertisement.ascx.cs">
+      <DependentUpon>Advertisement.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UCControl\Advertisement.ascx.designer.cs">
+      <DependentUpon>Advertisement.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UCControl\Footer.ascx.cs">
+      <DependentUpon>Footer.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UCControl\Footer.ascx.designer.cs">
+      <DependentUpon>Footer.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UCControl\LogLB.ascx.cs">
+      <DependentUpon>LogLB.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UCControl\LogLB.ascx.designer.cs">
+      <DependentUpon>LogLB.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UCControl\NavigationMenu.ascx.cs">
+      <DependentUpon>NavigationMenu.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UCControl\NavigationMenu.ascx.designer.cs">
+      <DependentUpon>NavigationMenu.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UCControl\SharHeader.ascx.cs">
+      <DependentUpon>SharHeader.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UCControl\SharHeader.ascx.designer.cs">
+      <DependentUpon>SharHeader.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="ueditor\net\Uploader.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="shar\AjaxLike.ashx" />
+    <Content Include="shar\AjaxFavorite.ashx" />
+    <Content Include="MaterPage\BasePage.Master" />
+    <Content Include="MaterPage\MaterPage.master" />
+    <Content Include="job\zhaopinPrcoess.ashx" />
+    <Content Include="Config\log4net.config" />
+    <Content Include="packages.config" />
+    <Content Include="combres.readme" />
+    <Content Include="Config\log.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <None Include="Properties\PublishProfiles\share.pubxml" />
+    <None Include="Properties\PublishProfiles\ShortArticle.pubxml" />
+    <Content Include="App_Themes\css\c.less" />
+    <Content Include="App_Themes\css\i-ColorWidth.less" />
+    <Content Include="App_Themes\css\l.less" />
+    <Content Include="App_Themes\css\login.less" />
+    <Content Include="App_Themes\css\mixins\l-color.less" />
+    <Content Include="App_Themes\css\mixins\m-background-variant.less" />
+    <Content Include="App_Themes\css\mixins\m-border-radius.less" />
+    <Content Include="App_Themes\css\mixins\m-center-block.less" />
+    <Content Include="App_Themes\css\mixins\m-clearfix.less" />
+    <Content Include="App_Themes\css\mixins\m-gradients.less" />
+    <Content Include="App_Themes\css\mixins\m-grid.less" />
+    <Content Include="App_Themes\css\mixins\m-hide-text.less" />
+    <Content Include="App_Themes\css\mixins\m-image.less" />
+    <Content Include="App_Themes\css\mixins\m-labels.less" />
+    <Content Include="App_Themes\css\mixins\m-reset.less" />
+    <Content Include="App_Themes\css\mixins\m-shadow.less" />
+    <Content Include="App_Themes\css\mixins\m-u.less" />
+    <Content Include="App_Themes\css\mixins\u-padding.less" />
+    <Content Include="App_Themes\css\mixins\veryless-plugin.less" />
+    <Content Include="App_Themes\css\mixins\veryless.less" />
+    <Content Include="App_Themes\css\p.less" />
+    <Content Include="App_Themes\css\print.less" />
+    <Content Include="App_Themes\css\reset.less" />
+    <Content Include="App_Themes\css\u.less" />
+    <Content Include="App_Themes\developer\bootstrap\css\bootstrap-theme.css.map" />
+    <Content Include="App_Themes\developer\bootstrap\css\bootstrap.css.map" />
+    <Content Include="App_Themes\developer\bootstrap\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="App_Themes\developer\bootstrap\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="App_Themes\developer\bootstrap\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="App_Themes\developer\flatUi\fonts\flat-ui-icons-regular.eot" />
+    <Content Include="App_Themes\developer\flatUi\fonts\flat-ui-icons-regular.ttf" />
+    <Content Include="App_Themes\developer\flatUi\fonts\flat-ui-icons-regular.woff" />
+    <Content Include="App_Themes\developer\flatUi\fonts\lato\lato-black.eot" />
+    <Content Include="App_Themes\developer\flatUi\fonts\lato\lato-black.ttf" />
+    <Content Include="App_Themes\developer\flatUi\fonts\lato\lato-black.woff" />
+    <Content Include="App_Themes\developer\flatUi\fonts\lato\lato-bold.eot" />
+    <Content Include="App_Themes\developer\flatUi\fonts\lato\lato-bold.ttf" />
+    <Content Include="App_Themes\developer\flatUi\fonts\lato\lato-bold.woff" />
+    <Content Include="App_Themes\developer\flatUi\fonts\lato\lato-bolditalic.eot" />
+    <Content Include="App_Themes\developer\flatUi\fonts\lato\lato-bolditalic.ttf" />
+    <Content Include="App_Themes\developer\flatUi\fonts\lato\lato-bolditalic.woff" />
+    <Content Include="App_Themes\developer\flatUi\fonts\lato\lato-italic.eot" />
+    <Content Include="App_Themes\developer\flatUi\fonts\lato\lato-italic.ttf" />
+    <Content Include="App_Themes\developer\flatUi\fonts\lato\lato-italic.woff" />
+    <Content Include="App_Themes\developer\flatUi\fonts\lato\lato-light.eot" />
+    <Content Include="App_Themes\developer\flatUi\fonts\lato\lato-light.ttf" />
+    <Content Include="App_Themes\developer\flatUi\fonts\lato\lato-light.woff" />
+    <Content Include="App_Themes\developer\flatUi\fonts\lato\lato-regular.eot" />
+    <Content Include="App_Themes\developer\flatUi\fonts\lato\lato-regular.ttf" />
+    <Content Include="App_Themes\developer\flatUi\fonts\lato\lato-regular.woff" />
+    <Content Include="App_Themes\developer\font-awesome-4.2.0\fonts\fontawesome-webfont.eot" />
+    <Content Include="App_Themes\developer\font-awesome-4.2.0\fonts\fontawesome-webfont.ttf" />
+    <Content Include="App_Themes\developer\font-awesome-4.2.0\fonts\fontawesome-webfont.woff" />
+    <Content Include="App_Themes\developer\font-awesome-4.2.0\fonts\FontAwesome.otf" />
+    <Content Include="App_Themes\developer\FooTable-2\.csslintrc" />
+    <Content Include="App_Themes\developer\FooTable-2\.jshintrc" />
+    <Content Include="App_Themes\developer\FooTable-2\.travis.yml" />
+    <Content Include="App_Themes\developer\FooTable-2\bower.json" />
+    <Content Include="App_Themes\developer\FooTable-2\component.json" />
+    <Content Include="App_Themes\developer\FooTable-2\composer.json" />
+    <Content Include="App_Themes\developer\FooTable-2\css\fonts\footable.eot" />
+    <Content Include="App_Themes\developer\FooTable-2\css\fonts\footable.ttf" />
+    <Content Include="App_Themes\developer\FooTable-2\css\fonts\footable.woff" />
+    <Content Include="App_Themes\developer\FooTable-2\demos\fonts\glyphiconshalflings-regular.eot" />
+    <Content Include="App_Themes\developer\FooTable-2\demos\fonts\glyphiconshalflings-regular.otf" />
+    <Content Include="App_Themes\developer\FooTable-2\demos\fonts\glyphiconshalflings-regular.ttf" />
+    <Content Include="App_Themes\developer\FooTable-2\demos\fonts\glyphiconshalflings-regular.woff" />
+    <Content Include="App_Themes\developer\FooTable-2\footable.jquery.json" />
+    <Content Include="App_Themes\developer\FooTable-2\icomoon\footable.json" />
+    <Content Include="App_Themes\developer\FooTable-2\js\.jshintrc" />
+    <Content Include="App_Themes\developer\FooTable-2\less\footable.core.less" />
+    <Content Include="App_Themes\developer\FooTable-2\less\footable.metro.less" />
+    <Content Include="App_Themes\developer\FooTable-2\less\footable.standalone.less" />
+    <Content Include="App_Themes\developer\FooTable-2\LICENSE" />
+    <Content Include="App_Themes\developer\FooTable-2\package.json" />
+    <Content Include="App_Themes\developer\FooTable-2\README.md" />
+    <Content Include="App_Themes\developer\FooTable-2\screenshot.pdn" />
+    <Content Include="App_Themes\developer\iCheck-1.x\bower.json" />
+    <Content Include="App_Themes\developer\iCheck-1.x\CHANGELOG.md" />
+    <Content Include="App_Themes\developer\iCheck-1.x\demo\css\custom.styl" />
+    <Content Include="App_Themes\developer\iCheck-1.x\demo\css\montserrat-bold.eot" />
+    <Content Include="App_Themes\developer\iCheck-1.x\demo\css\montserrat-bold.ttf" />
+    <Content Include="App_Themes\developer\iCheck-1.x\demo\css\montserrat-bold.woff" />
+    <Content Include="App_Themes\developer\iCheck-1.x\demo\css\montserrat-regular.eot" />
+    <Content Include="App_Themes\developer\iCheck-1.x\demo\css\montserrat-regular.ttf" />
+    <Content Include="App_Themes\developer\iCheck-1.x\demo\css\montserrat-regular.woff" />
+    <Content Include="App_Themes\developer\iCheck-1.x\icheck.jquery.json" />
+    <Content Include="App_Themes\developer\iCheck-1.x\README.md" />
+    <Content Include="App_Themes\developer\jeasyui\themes\black\images\Thumbs.db" />
+    <Content Include="App_Themes\developer\jeasyui\themes\bootstrap\images\Thumbs.db" />
+    <Content Include="App_Themes\developer\jeasyui\themes\default\images\Thumbs.db" />
+    <Content Include="App_Themes\developer\jeasyui\themes\gray\images\Thumbs.db" />
+    <Content Include="App_Themes\developer\jeasyui\themes\metro\images\Thumbs.db" />
+    <Content Include="App_Themes\Image\images\Carousel.rar" />
+    <Content Include="ueditor\dialogs\anchor\vssver2.scc" />
+    <Content Include="ueditor\dialogs\attachment\fileTypeImages\vssver2.scc" />
+    <Content Include="ueditor\dialogs\attachment\vssver2.scc" />
+    <Content Include="ueditor\dialogs\background\vssver2.scc" />
+    <Content Include="ueditor\dialogs\emotion\images\vssver2.scc" />
+    <Content Include="ueditor\dialogs\emotion\vssver2.scc" />
+    <Content Include="ueditor\dialogs\gmap\vssver2.scc" />
+    <Content Include="ueditor\dialogs\help\vssver2.scc" />
+    <Content Include="ueditor\dialogs\image\images\vssver2.scc" />
+    <Content Include="ueditor\dialogs\image\vssver2.scc" />
+    <Content Include="ueditor\dialogs\insertframe\vssver2.scc" />
+    <Content Include="ueditor\dialogs\link\vssver2.scc" />
+    <Content Include="ueditor\dialogs\map\vssver2.scc" />
+    <Content Include="ueditor\dialogs\music\vssver2.scc" />
+    <Content Include="ueditor\dialogs\scrawl\images\vssver2.scc" />
+    <Content Include="ueditor\dialogs\scrawl\vssver2.scc" />
+    <Content Include="ueditor\dialogs\searchreplace\vssver2.scc" />
+    <Content Include="ueditor\dialogs\snapscreen\vssver2.scc" />
+    <Content Include="ueditor\dialogs\spechars\vssver2.scc" />
+    <Content Include="ueditor\dialogs\table\vssver2.scc" />
+    <Content Include="ueditor\dialogs\template\images\vssver2.scc" />
+    <Content Include="ueditor\dialogs\template\vssver2.scc" />
+    <Content Include="ueditor\dialogs\video\images\vssver2.scc" />
+    <Content Include="ueditor\dialogs\video\vssver2.scc" />
+    <Content Include="ueditor\dialogs\vssver2.scc" />
+    <Content Include="ueditor\dialogs\webapp\vssver2.scc" />
+    <Content Include="ueditor\dialogs\wordimage\vssver2.scc" />
+    <Content Include="ueditor\lang\en\images\vssver2.scc" />
+    <Content Include="ueditor\lang\en\vssver2.scc" />
+    <Content Include="ueditor\lang\zh-cn\images\vssver2.scc" />
+    <Content Include="ueditor\lang\zh-cn\vssver2.scc" />
+    <Content Include="ueditor\net\fileUp.ashx" />
+    <Content Include="ueditor\net\getContent.ashx" />
+    <Content Include="ueditor\net\getMovie.ashx" />
+    <Content Include="ueditor\net\getRemoteImage.ashx" />
+    <Content Include="ueditor\net\imageManager.ashx" />
+    <Content Include="ueditor\net\imageUp.ashx" />
+    <Content Include="ueditor\net\scrawlUp.ashx" />
+    <Content Include="ueditor\net\upload\2013-10-23\vssver2.scc" />
+    <Content Include="ueditor\net\vssver2.scc" />
+    <Content Include="ueditor\net\Web.config" />
+    <Content Include="ueditor\themes\default\css\vssver2.scc" />
+    <Content Include="ueditor\themes\default\images\vssver2.scc" />
+    <Content Include="ueditor\themes\default\vssver2.scc" />
+    <Content Include="ueditor\themes\vssver2.scc" />
+    <Content Include="ueditor\third-party\codemirror\vssver2.scc" />
+    <Content Include="ueditor\third-party\snapscreen\vssver2.scc" />
+    <Content Include="ueditor\third-party\swfupload\vssver2.scc" />
+    <Content Include="ueditor\third-party\SyntaxHighlighter\vssver2.scc" />
+    <Content Include="ueditor\vssver2.scc" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Code\" />
+    <Folder Include="Upload\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:23067/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

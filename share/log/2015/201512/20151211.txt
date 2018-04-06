@@ -1,0 +1,4 @@
+
+ 
+记录时间：2015-12-11 08:45:22,521 线程ID:[33860] 日志级别：  ERROR 出错类：share.log4net1.LogHelper property: [(null)] 42867(run time):输出程序从运行到执行到当前语句时消耗的毫秒数 49：输出语句所在的行号 c:\Users\JiangYanJun\Desktop\我爱分享网\我爱分享网\share\Model\Tool.cs：输出语句所在的文件名  错误描述：文件“C:\Users\JiangYanJun\Desktop\我爱分享网\我爱分享网\share\LogErro1512.txt”正由另一进程使用，因此该进程无法访问此文件。
+ 

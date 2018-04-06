@@ -1,0 +1,71 @@
+<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="BasePage.master.cs" Inherits="UI.MaterPage.BasePage" %>
+
+<%@ Register TagPrefix="ShareHader" TagName="ShareHader" Src="~/UCControl/SharHeader.ascx" %>
+<%@ Import Namespace="Combres" %>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta property="qc:admins" content="47017602050163757" />
+    <%--   <meta http-equiv="Content-Type"content="text/html;charset=gb2312" />--%>
+    <!-- 文档的头部区域中元数据区的字符集定义,这里是UTF-8,表示国际通用的字符集编码 -->
+    <meta charset="UTF-8" />
+    <!-- 文档的头部区域的标题。这里要注意,这个tittle的内容对于SEO来说极其重要 -->
+    <link rel="shortcut icon" href="../App_Themes/Image/images/log.ico" />
+    <title>我爱分享网 分享从这里起航,分享,传播,共享,免费,学习平台,求职联盟</title>
+    <!-- 文档头部区域的兼容性写法 -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1 " />
+    <!-- 文档头部区域元数据区关于网站的关键字 -->
+    <meta name="keywords" content="我爱分享网,分享,爱分享,传播,互助,共享,免费,学习,求职" />
+    <!-- 文档头部区域元数据区关于文档描述的定义 -->
+    <meta name="description" content="分享更懂生活,分享世界各地有趣,有爱,有价值的故事,微笑生活,快乐分享,分享最震撼心灵的智慧,最励志的人生感悟,这里是你经典的成功法则,这里是华人首富商学院,这里是你环游世界的好导游,这里是你居家养生好帮手,这里是男人的加油站,这里是女人的美容院,小孩的游乐园,老人的养生馆,这里是你学习,工作生活的加油站减压舱" />
+    <!-- 文档头部区域元数据区关于开发人员姓名的定义 -->
+    <meta name="author" content="姜言俊" />
+    <!-- 文档头部区域元数据区关于版权的定义 -->
+    <meta name="copyright" content="我爱分享网,wafxw.cn, mmmxa.com" />
+    <meta name="baidu-site-verification" content="4aQ8VECov4" />
+    <meta name="baidu-site-verification" content="ua8DIgy70b" />
+    <meta name="ciku5-verification" content="ab1c3dcc-9008-451f-a12c-9f67130a3053" />
+    <meta name="chinaz-site-verification" content="506319BA-C334-C790-A023-CE3BAE072149" />
+    <!-- 文档头部区域的兼容性写法 -->
+    <meta baidu-gxt-verify-token="4a911ae5b3eeabdd2379d8362966c702">
+    <script>document.write(unescape('%3Cdiv id="hm_t_86056"%3E%3C/div%3E%3Cscript charset="utf-8" src="http://crs.baidu.com/t.js?siteId=c5798d023529c3903b3fc0799b352cd7&planId=86056&async=0&referer=') + encodeURIComponent(document.referrer) + '&title=' + encodeURIComponent(document.title) + '&rnd=' + (+new Date) + unescape('"%3E%3C/script%3E'));</script>
+    <script>window._bd_share_config = { "common": { "bdSnsKey": {}, "bdText": "", "bdMini": "1", "bdMiniList": false, "bdPic": "", "bdStyle": "0", "bdSize": "16" }, "slide": { "type": "slide", "bdImg": "6", "bdPos": "right", "bdTop": "97" }, "image": { "viewList": ["qzone", "tsina", "tqq", "renren", "weixin"], "viewText": "分享到：", "viewSize": "16" }, "selectShare": { "bdContainerClass": null, "bdSelectMiniList": ["qzone", "tsina", "tqq", "renren", "weixin"] } }; with (document) 0[(getElementsByTagName('head')[0] || body).appendChild(createElement('script')).src = 'http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion=' + ~(-new Date() / 36e5)];</script>
+    <%-- 百度统计--%>
+    <script>
+        var _hmt = _hmt || [];
+        (function () {
+            var hm = document.createElement("script");
+            hm.src = "//hm.baidu.com/hm.js?c5798d023529c3903b3fc0799b352cd7";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+    <%= WebExtensions.CombresLink("siteCss") %>
+    <%= WebExtensions.CombresLink("siteJs") %>
+    <%--    解决不带www转定向到带www的域名下--%>
+    <script language="javascript">
+        if (document.domain == 'wafxw.cn')
+            this.location = "http://www.wafxw.cn" + this.location.pathname + this.location.search;
+    </script>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <ShareHader:ShareHader ID="ShareHader" runat="server" />
+        </div>
+        <asp:ScriptManager ID="ScriptManager1" runat="server" ScriptMode="Release" AsyncPostBackTimeout="600" EnablePageMethods="true" EnablePartialRendering="true">
+        </asp:ScriptManager>
+        <asp:UpdateProgress ID="progress" runat="server" DisplayAfter="0">
+            <ProgressTemplate>
+                <img src="../App_Themes/js/ajax-loader.gif" alt="Loading....." style="position: absolute; left: 40%; top: 30%; z-index: 100000;" />
+            </ProgressTemplate>
+        </asp:UpdateProgress>
+        <div>
+            <div style="overflow-x: hidden">
+                <asp:ContentPlaceHolder ID="cphBlank" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+        </div>
+    </form>
+</body>
+</html>

@@ -1,0 +1,4 @@
+
+ 
+记录时间：2017-04-15 09:40:18,033 线程ID:[3908] 日志级别：  ERROR 出错类：share.log4net1.LogHelper property: [(null)] 753203(run time):输出程序从运行到执行到当前语句时消耗的毫秒数 36：输出语句所在的行号 E:\工作室\新项目\wafxw\share\log4net1\LogHelper.cs：输出语句所在的文件名  错误描述：文件“E:\工作室\新项目\wafxw\share\LogErro1704.txt”正由另一进程使用，因此该进程无法访问此文件。
+ 
